@@ -45,6 +45,7 @@ export default function Contact() {
               alt="ClearPoint Window Services Logo" 
               width={120}
               height={60}
+              style={{height: '60px', width: 'auto'}}
             />
           </div>
           
@@ -369,6 +370,7 @@ export default function Contact() {
                 alt="ClearPoint Window Services Logo" 
                 width={160}
                 height={80}
+                style={{height: '80px', width: 'auto'}}
               />
             </div>
             
