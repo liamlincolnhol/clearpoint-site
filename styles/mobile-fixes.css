@@ -1,6 +1,173 @@
 /* Mobile-First Quick Fixes */
 
-/* Hamburger Menu Styles */
+/* Improved CSS-Only Mobile Navigation */
+.improved-mobile-nav {
+  display: none;
+}
+
+.mobile-nav-details {
+  position: relative;
+}
+
+.mobile-nav-summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+}
+
+.mobile-nav-summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Animated hamburger icon */
+.hamburger-lines {
+  display: flex;
+  flex-direction: column;
+  width: 20px;
+  height: 16px;
+  justify-content: space-between;
+}
+
+.hamburger-lines span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #2C3E50;
+  transition: all 0.3s ease;
+}
+
+/* Animate hamburger when open */
+.mobile-nav-details[open] .hamburger-lines span:first-child {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.mobile-nav-details[open] .hamburger-lines span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-nav-details[open] .hamburger-lines span:last-child {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.mobile-nav-content {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  min-width: 200px;
+  background: #FAF9F8;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  padding: 0.5rem 0;
+  z-index: 50;
+  margin-top: 8px;
+  animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mobile-nav-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-nav-item {
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #2C3E50;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: background-color 0.2s ease;
+  border-radius: 4px;
+  margin: 0 4px;
+}
+
+.mobile-nav-item:hover,
+.mobile-nav-item:focus {
+  background-color: rgba(74, 93, 122, 0.1);
+}
+
+.mobile-nav-item.active {
+  font-weight: 600;
+  color: #4A5D7A;
+  background-color: rgba(74, 93, 122, 0.15);
+}
+
+/* Simple CSS-Only Mobile Navigation (backup) */
+.simple-mobile-nav {
+  display: none;
+}
+
+.mobile-nav-dropdown {
+  position: relative;
+}
+
+.mobile-nav-toggle-simple {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 8px;
+  color: #2C3E50;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.mobile-nav-toggle-simple::-webkit-details-marker {
+  display: none;
+}
+
+.mobile-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  min-width: 200px;
+  background: #FAF9F8;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 0.5rem 0;
+  z-index: 50;
+  margin-top: 4px;
+}
+
+.mobile-nav-link {
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #2C3E50;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: background-color 0.2s;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link:focus {
+  background-color: rgba(74, 93, 122, 0.1);
+}
+
+.mobile-nav-link.active {
+  font-weight: 600;
+  color: #4A5D7A;
+  background-color: rgba(74, 93, 122, 0.1);
+}
+
+/* Hamburger Menu Styles (backup) */
 .mobile-nav-toggle {
   display: none;
   background: none;
@@ -49,12 +216,14 @@
 
 /* Mobile Responsive Fixes */
 @media (max-width: 768px) {
-  /* Show mobile navigation */
-  .mobile-nav-toggle {
+  /* Show improved mobile navigation */
+  .improved-mobile-nav {
     display: block;
   }
   
-  /* Hide desktop navigation */
+  /* Hide other navigation types on mobile */
+  .simple-mobile-nav,
+  .mobile-nav-toggle,
   .desktop-nav {
     display: none;
   }
