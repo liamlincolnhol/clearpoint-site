@@ -5,6 +5,18 @@
   display: none;
 }
 
+/* Always show on very small screens regardless */
+@media (max-width: 480px) {
+  .improved-mobile-nav {
+    display: block !important;
+  }
+  
+  .desktop-nav,
+  nav.desktop-nav {
+    display: none !important;
+  }
+}
+
 .mobile-nav-details {
   position: relative;
 }
@@ -214,18 +226,39 @@
   background-color: rgba(74, 93, 122, 0.1);
 }
 
-/* Mobile Responsive Fixes */
-@media (max-width: 768px) {
-  /* Show improved mobile navigation */
-  .improved-mobile-nav {
-    display: block;
+/* EMERGENCY Mobile Fix - Very Aggressive */
+@media screen and (max-width: 768px) {
+  /* Hide ALL desktop navigation on mobile */
+  nav[style*="display: flex"],
+  nav[style*="gap: 2rem"],
+  .desktop-nav,
+  header nav {
+    display: none !important;
+    visibility: hidden !important;
   }
   
-  /* Hide other navigation types on mobile */
-  .simple-mobile-nav,
-  .mobile-nav-toggle,
-  .desktop-nav {
-    display: none;
+  /* Show mobile navigation */
+  .improved-mobile-nav {
+    display: block !important;
+    visibility: visible !important;
+  }
+  
+  /* Make header more compact */
+  header > div {
+    padding: 0 0.5rem !important;
+    gap: 0.5rem !important;
+  }
+  
+  /* Smaller "Book Now" button */
+  header button,
+  header a button {
+    padding: 6px 12px !important;
+    font-size: 0.75rem !important;
+  }
+  
+  /* Force mobile layout */
+  header {
+    padding: 0 !important;
   }
   
   /* Grid Layout Fixes */
