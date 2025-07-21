@@ -427,7 +427,7 @@ export default function Booking() {
               <p style={{fontSize: '0.875rem', color: '#6C757D'}}>
                 © 2025 ClearPoint Window Services. All rights reserved.
               </p>
-              <p style={{fontWeight: '600', fontSize: '1.125rem', color: '#4A5D7A'}}>Contact Mason for Free Quote</p>
+              <p style={{fontWeight: '600', fontSize: '1.125rem', color: '#4A5D7A', textAlign: 'center'}}>Contact Mason for Free Quote</p>
               <button style={{
                 backgroundColor: '#4A5D7A',
                 color: '#FFFFFF',

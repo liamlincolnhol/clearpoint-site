@@ -50,7 +50,7 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section style={{paddingTop: '160px', paddingBottom: '80px', backgroundColor: '#F8F9FA'}}>
+      <section style={{paddingTop: '160px', paddingBottom: '80px', backgroundImage: 'linear-gradient(rgba(248, 249, 250, 0.85), rgba(248, 249, 250, 0.85)), url(/images/photos/wash3.jpeg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}>
         <div style={{maxWidth: '1280px', margin: '0 auto', padding: '0 1rem'}}>
           <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center'}}>
             {/* Left Column - Text Content */}
@@ -142,45 +142,8 @@ export default function Home() {
               </div>
             </div>
             
-            {/* Right Column - Hero Image */}
-            <div style={{display: 'flex', justifyContent: 'center'}}>
-              <div style={{position: 'relative'}}>
-                <div style={{
-                  width: '384px',
-                  height: '384px',
-                  borderRadius: '50%',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  border: '4px solid #87CEEB',
-                  backgroundColor: 'rgba(135, 206, 235, 0.2)',
-                  boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)'
-                }}>
-                  <span style={{fontSize: '7rem'}}>👨‍💼</span>
-                </div>
-                {/* Blue accent elements */}
-                <div style={{
-                  position: 'absolute',
-                  top: '-16px',
-                  right: '-16px',
-                  width: '64px',
-                  height: '64px',
-                  borderRadius: '50%',
-                  backgroundColor: '#87CEEB',
-                  opacity: 0.3
-                }}></div>
-                <div style={{
-                  position: 'absolute',
-                  bottom: '-24px',
-                  left: '-24px',
-                  width: '48px',
-                  height: '48px',
-                  borderRadius: '50%',
-                  backgroundColor: '#4A5D7A',
-                  opacity: 0.4
-                }}></div>
-              </div>
-            </div>
+            {/* Right Column - Empty space to maintain layout */}
+            <div></div>
           </div>
         </div>
       </section>
@@ -199,7 +162,7 @@ export default function Home() {
           <p style={{
             fontSize: '1.125rem',
             marginBottom: '4rem',
-            maxWidth: '42rem',
+            maxWidth: '60rem',
             margin: '0 auto 4rem auto',
             lineHeight: '1.6',
             color: '#6C757D'
@@ -306,7 +269,7 @@ export default function Home() {
               <p style={{fontSize: '0.875rem', color: '#6C757D'}}>
                 © 2025 ClearPoint Window Services. All rights reserved.
               </p>
-              <p style={{fontWeight: '600', fontSize: '1.125rem', color: '#4A5D7A'}}>Contact Mason for Free Quote</p>
+              <p style={{fontWeight: '600', fontSize: '1.125rem', color: '#4A5D7A', textAlign: 'center'}}>Contact Mason for Free Quote</p>
               <button style={{
                 backgroundColor: '#4A5D7A',
                 color: '#FFFFFF',

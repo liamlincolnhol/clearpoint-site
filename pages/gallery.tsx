@@ -19,38 +19,56 @@ export default function Gallery() {
       category: 'residential',
       type: 'before-after',
       title: 'Residential Home Windows',
-      description: 'Complete window cleaning for a 2-story home',
-      beforeImage: '/images/placeholder-before.jpg',
-      afterImage: '/images/placeholder-after.jpg',
-      location: 'Suburban Home'
+      description: 'Complete window cleaning transformation',
+      beforeImage: '/images/photos/before1.jpg',
+      afterImage: '/images/photos/after1.jpeg',
+      location: 'Local Residential'
     },
     {
       id: 2,
-      category: 'commercial',
+      category: 'residential',
       type: 'single',
-      title: 'Office Building Storefront',
-      description: 'Commercial window cleaning for office complex',
-      image: '/images/placeholder-commercial.jpg',
-      location: 'Downtown Office'
+      title: 'Professional Window Cleaning',
+      description: 'Mason providing quality service',
+      image: '/images/photos/wash1.jpeg',
+      location: 'On-Site Service'
     },
     {
       id: 3,
       category: 'residential',
       type: 'before-after',
-      title: 'Large Bay Windows',
-      description: 'Detailed cleaning of large residential windows',
-      beforeImage: '/images/placeholder-before-2.jpg',
-      afterImage: '/images/placeholder-after-2.jpg',
-      location: 'Luxury Home'
+      title: 'House Window Cleaning',
+      description: 'Professional window cleaning results',
+      beforeImage: '/images/photos/before2.jpeg',
+      afterImage: '/images/photos/after2.jpg',
+      location: 'Residential Home'
     },
     {
       id: 4,
-      category: 'commercial',
+      category: 'residential',
       type: 'single',
-      title: 'Retail Storefront',
-      description: 'Weekly maintenance for retail location',
-      image: '/images/placeholder-retail.jpg',
-      location: 'Shopping Center'
+      title: 'Quality Equipment & Technique',
+      description: 'Using professional tools for perfect results',
+      image: '/images/photos/wash2.jpeg',
+      location: 'Service in Action'
+    },
+    {
+      id: 5,
+      category: 'residential',
+      type: 'single',
+      title: 'Beautiful Home Exterior',
+      description: 'Crystal clear windows enhance curb appeal',
+      image: '/images/photos/house1.jpeg',
+      location: 'Residential Property'
+    },
+    {
+      id: 6,
+      category: 'residential',
+      type: 'single',
+      title: 'ClearPoint Window Services',
+      description: 'Professional window cleaning service',
+      image: '/images/photos/wash3.jpeg',
+      location: 'Quality Service'
     }
   ]
 

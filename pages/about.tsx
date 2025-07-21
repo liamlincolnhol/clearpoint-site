@@ -49,27 +49,14 @@ export default function About() {
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section style={{paddingTop: '160px', paddingBottom: '80px', backgroundColor: '#F8F9FA'}}>
-        <div style={{maxWidth: '1280px', margin: '0 auto', padding: '0 1rem', textAlign: 'center'}}>
-          <h1 style={{fontSize: '4rem', fontWeight: 'bold', marginBottom: '1.5rem', color: '#2C3E50'}}>
-            About Mason
-          </h1>
-          <p style={{fontSize: '1.25rem', maxWidth: '42rem', margin: '0 auto', lineHeight: '1.6', color: '#6C757D'}}>
-            Hi! I'm Mason Rose, a 17-year-old starting up ClearPoint Window Services this summer. 
-            I'm passionate about providing quality service and helping my community.
-          </p>
-        </div>
-      </section>
-
-      {/* About Story */}
-      <section style={{padding: '80px 0', backgroundColor: '#FFFFFF'}}>
+      {/* About Me Section */}
+      <section style={{paddingTop: '160px', paddingBottom: '80px', backgroundColor: '#FFFFFF'}}>
         <div style={{maxWidth: '1280px', margin: '0 auto', padding: '0 1rem'}}>
           <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center'}}>
             <div>
-              <h2 style={{fontSize: '3rem', fontWeight: 'bold', color: '#2C3E50', marginBottom: '1.5rem'}}>
-                My Story
-              </h2>
+              <h1 style={{fontSize: '3rem', fontWeight: 'bold', color: '#2C3E50', marginBottom: '1.5rem'}}>
+                About Me
+              </h1>
               <div style={{display: 'flex', flexDirection: 'column', gap: '1rem', color: '#6C757D', fontSize: '1.125rem', lineHeight: '1.6'}}>
                 <p>
                   As a 17-year-old entrepreneur, I decided to start ClearPoint Window Services to earn money 
@@ -90,16 +77,32 @@ export default function About() {
             <div>
               <div style={{
                 aspectRatio: '1',
-                backgroundColor: 'rgba(135, 206, 235, 0.2)',
                 borderRadius: '8px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                border: '2px solid #87CEEB'
+                overflow: 'hidden',
+                border: '2px solid #4A5D7A',
+                position: 'relative'
               }}>
-                <div style={{textAlign: 'center', color: '#4A5D7A'}}>
-                  <div style={{fontSize: '6rem', marginBottom: '1rem'}}>👨‍💼</div>
-                  <p style={{fontSize: '1.25rem', fontWeight: '600'}}>Mason Rose</p>
+                <img 
+                  src="/images/photos/mason.jpeg" 
+                  alt="Mason Rose - Founder of ClearPoint Window Services" 
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    objectPosition: 'center'
+                  }}
+                />
+                <div style={{
+                  position: 'absolute',
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  background: 'linear-gradient(transparent, rgba(0,0,0,0.7))',
+                  color: '#FFFFFF',
+                  padding: '2rem 1rem 1rem',
+                  textAlign: 'center'
+                }}>
+                  <p style={{fontSize: '1.25rem', fontWeight: '600', marginBottom: '0.25rem'}}>Mason Rose</p>
                   <p style={{fontSize: '0.875rem'}}>Founder & Operator</p>
                 </div>
               </div>
@@ -172,32 +175,8 @@ export default function About() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section style={{padding: '80px 0', backgroundColor: '#4A5D7A', color: '#FFFFFF'}}>
-        <div style={{maxWidth: '1280px', margin: '0 auto', padding: '0 1rem', textAlign: 'center'}}>
-          <h2 style={{fontSize: '3rem', fontWeight: 'bold', marginBottom: '1rem'}}>
-            Ready to Work Together?
-          </h2>
-          <p style={{fontSize: '1.25rem', marginBottom: '2rem', color: 'rgba(255, 255, 255, 0.9)'}}>
-            Let's get your windows sparkling clean! Message me for a free quote.
-          </p>
-          <button style={{
-            backgroundColor: '#87CEEB',
-            color: '#FFFFFF',
-            padding: '16px 32px',
-            borderRadius: '6px',
-            border: 'none',
-            fontSize: '1.125rem',
-            fontWeight: '500',
-            cursor: 'pointer'
-          }}>
-            Contact Mason
-          </button>
-        </div>
-      </section>
-
       {/* Footer */}
-      <footer style={{backgroundColor: '#FFFFFF', borderTop: '1px solid #E5E7EB', padding: '3rem 0'}}>
+      <footer style={{backgroundColor: '#FAF9F8', borderTop: '1px solid #E5E7EB', padding: '3rem 0'}}>
         <div style={{maxWidth: '1280px', margin: '0 auto', padding: '0 1rem'}}>
           <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '2rem'}}>
             <div style={{backgroundColor: '#FAF9F8', padding: '12px', borderRadius: '8px', display: 'inline-block'}}>
@@ -212,7 +191,7 @@ export default function About() {
               <p style={{fontSize: '0.875rem', color: '#6C757D'}}>
                 © 2025 ClearPoint Window Services. All rights reserved.
               </p>
-              <p style={{fontWeight: '600', fontSize: '1.125rem', color: '#4A5D7A'}}>Contact Mason for Free Quote</p>
+              <p style={{fontWeight: '600', fontSize: '1.125rem', color: '#4A5D7A', textAlign: 'center'}}>Contact Mason for Free Quote</p>
               <button style={{
                 backgroundColor: '#4A5D7A',
                 color: '#FFFFFF',
