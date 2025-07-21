@@ -1,6 +1,7 @@
 import SEO from '../components/SEO'
 import CalcomFloatingButton from '../components/CalcomFloatingButton'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Services() {
 
@@ -17,10 +18,11 @@ export default function Services() {
         <div style={{maxWidth: '1280px', margin: '0 auto', padding: '0 1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '80px'}}>
           {/* Logo */}
           <div style={{display: 'flex', alignItems: 'center'}}>
-            <img 
+            <Image 
               src="/images/ clearpoint-logo.png" 
               alt="ClearPoint Window Services Logo" 
-              style={{height: '60px', width: 'auto'}}
+              width={120}
+              height={60}
             />
           </div>
           
@@ -72,12 +74,14 @@ export default function Services() {
               <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1rem'}}>
                 <div>
                   <p style={{fontSize: '0.875rem', fontWeight: '600', marginBottom: '0.5rem', color: '#6C757D', textAlign: 'center'}}>BEFORE</p>
-                  <img 
+                  <Image 
                     src="/images/photos/before1.jpg" 
                     alt="Before window cleaning" 
+                    width={300}
+                    height={225}
                     style={{
                       width: '100%',
-                      aspectRatio: '4/3',
+                      height: 'auto',
                       objectFit: 'cover',
                       borderRadius: '8px',
                       border: '2px solid #E5E7EB'
@@ -86,12 +90,14 @@ export default function Services() {
                 </div>
                 <div>
                   <p style={{fontSize: '0.875rem', fontWeight: '600', marginBottom: '0.5rem', color: '#4A5D7A', textAlign: 'center'}}>AFTER</p>
-                  <img 
+                  <Image 
                     src="/images/photos/after1.jpeg" 
                     alt="After window cleaning" 
+                    width={300}
+                    height={225}
                     style={{
                       width: '100%',
-                      aspectRatio: '4/3',
+                      height: 'auto',
                       objectFit: 'cover',
                       borderRadius: '8px',
                       border: '2px solid #4A5D7A'
@@ -112,12 +118,14 @@ export default function Services() {
               <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1rem'}}>
                 <div>
                   <p style={{fontSize: '0.875rem', fontWeight: '600', marginBottom: '0.5rem', color: '#6C757D', textAlign: 'center'}}>BEFORE</p>
-                  <img 
+                  <Image 
                     src="/images/photos/before2.jpeg" 
                     alt="Before window cleaning" 
+                    width={300}
+                    height={225}
                     style={{
                       width: '100%',
-                      aspectRatio: '4/3',
+                      height: 'auto',
                       objectFit: 'cover',
                       borderRadius: '8px',
                       border: '2px solid #E5E7EB'
@@ -126,12 +134,14 @@ export default function Services() {
                 </div>
                 <div>
                   <p style={{fontSize: '0.875rem', fontWeight: '600', marginBottom: '0.5rem', color: '#4A5D7A', textAlign: 'center'}}>AFTER</p>
-                  <img 
+                  <Image 
                     src="/images/photos/after2.jpg" 
                     alt="After window cleaning" 
+                    width={300}
+                    height={225}
                     style={{
                       width: '100%',
-                      aspectRatio: '4/3',
+                      height: 'auto',
                       objectFit: 'cover',
                       borderRadius: '8px',
                       border: '2px solid #4A5D7A'
@@ -150,12 +160,14 @@ export default function Services() {
           <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem'}}>
             
             <div style={{textAlign: 'center'}}>
-              <img 
+              <Image 
                 src="/images/photos/wash1.jpeg" 
                 alt="Professional window cleaning in action" 
+                width={300}
+                height={225}
                 style={{
                   width: '100%',
-                  aspectRatio: '4/3',
+                  height: 'auto',
                   objectFit: 'cover',
                   borderRadius: '12px',
                   boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1)',
@@ -171,12 +183,14 @@ export default function Services() {
             </div>
 
             <div style={{textAlign: 'center'}}>
-              <img 
+              <Image 
                 src="/images/photos/wash2.jpeg" 
                 alt="Quality window cleaning technique" 
+                width={300}
+                height={225}
                 style={{
                   width: '100%',
-                  aspectRatio: '4/3',
+                  height: 'auto',
                   objectFit: 'cover',
                   borderRadius: '12px',
                   boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1)',
@@ -192,12 +206,14 @@ export default function Services() {
             </div>
 
             <div style={{textAlign: 'center'}}>
-              <img 
+              <Image 
                 src="/images/photos/house1.jpeg" 
                 alt="Beautiful home with clean windows" 
+                width={300}
+                height={225}
                 style={{
                   width: '100%',
-                  aspectRatio: '4/3',
+                  height: 'auto',
                   objectFit: 'cover',
                   borderRadius: '12px',
                   boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1)',
@@ -222,10 +238,11 @@ export default function Services() {
         <div style={{maxWidth: '1280px', margin: '0 auto', padding: '0 1rem'}}>
           <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '2rem'}}>
             <div style={{backgroundColor: '#FAF9F8', padding: '12px', borderRadius: '8px', display: 'inline-block'}}>
-              <img 
+              <Image 
                 src="/images/ clearpoint-logo.png" 
                 alt="ClearPoint Window Services Logo" 
-                style={{height: '80px', width: 'auto'}}
+                width={160}
+                height={80}
               />
             </div>
             

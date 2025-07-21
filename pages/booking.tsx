@@ -2,6 +2,7 @@ import SEO from '../components/SEO'
 import CalcomFloatingButton from '../components/CalcomFloatingButton'
 import Link from 'next/link'
 import { useState } from 'react'
+import Image from 'next/image'
 
 export default function Booking() {
   const [formData, setFormData] = useState({
@@ -44,10 +45,11 @@ export default function Booking() {
         <div style={{maxWidth: '1280px', margin: '0 auto', padding: '0 1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '80px'}}>
           {/* Logo */}
           <div style={{display: 'flex', alignItems: 'center'}}>
-            <img 
+            <Image 
               src="/images/ clearpoint-logo.png" 
               alt="ClearPoint Window Services Logo" 
-              style={{height: '60px', width: 'auto'}}
+              width={120}
+              height={60}
             />
           </div>
           
@@ -416,10 +418,11 @@ export default function Booking() {
         <div style={{maxWidth: '1280px', margin: '0 auto', padding: '0 1rem'}}>
           <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '2rem'}}>
             <div>
-              <img 
+              <Image 
                 src="/images/ clearpoint-logo.png" 
                 alt="ClearPoint Window Services Logo" 
-                style={{height: '80px', width: 'auto'}}
+                width={160}
+                height={80}
               />
             </div>
             
