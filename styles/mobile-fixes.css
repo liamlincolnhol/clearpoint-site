@@ -5,7 +5,15 @@
   display: none;
 }
 
-/* Always show on very small screens regardless */
+/* Show mobile nav on all mobile screens */
+@media (max-width: 768px) {
+  .improved-mobile-nav {
+    display: block !important;
+    visibility: visible !important;
+  }
+}
+
+/* Additional backup for very small screens */
 @media (max-width: 480px) {
   .improved-mobile-nav {
     display: block !important;
@@ -228,19 +236,28 @@
 
 /* EMERGENCY Mobile Fix - Very Aggressive */
 @media screen and (max-width: 768px) {
-  /* Hide ALL desktop navigation on mobile */
+  /* Hide ALL desktop navigation on mobile - Multiple targeting approaches */
   nav[style*="display: flex"],
   nav[style*="gap: 2rem"],
+  nav[style*="display:flex"],
+  nav[style*="gap:2rem"],
   .desktop-nav,
-  header nav {
+  header nav,
+  nav.desktop-nav,
+  header .desktop-nav,
+  header nav[style*="flex"] {
     display: none !important;
     visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
   }
   
   /* Show mobile navigation */
   .improved-mobile-nav {
     display: block !important;
     visibility: visible !important;
+    opacity: 1 !important;
   }
   
   /* Make header more compact */

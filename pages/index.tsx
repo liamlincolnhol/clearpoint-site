@@ -3,6 +3,7 @@ import CalcomFloatingButton from '../components/CalcomFloatingButton'
 import Link from 'next/link'
 import Image from 'next/image'
 import ImprovedMobileNav from '../components/ImprovedMobileNav'
+import MobileNavScript from '../components/MobileNavScript'
 
 export default function Home() {
   return (
@@ -301,6 +302,7 @@ export default function Home() {
       </footer>
 
       <CalcomFloatingButton />
+      <MobileNavScript />
     </div>
   )
 }
