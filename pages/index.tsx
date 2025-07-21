@@ -100,14 +100,16 @@ export default function Home() {
                     transition: 'all 0.3s ease'
                   }}
                   onMouseEnter={(e) => {
-                    e.target.style.backgroundColor = '#3A4D6A';
-                    e.target.style.transform = 'translateY(-2px)';
-                    e.target.style.boxShadow = '0 8px 25px rgba(74, 93, 122, 0.3)';
+                    const target = e.target as HTMLButtonElement;
+                    target.style.backgroundColor = '#3A4D6A';
+                    target.style.transform = 'translateY(-2px)';
+                    target.style.boxShadow = '0 8px 25px rgba(74, 93, 122, 0.3)';
                   }}
                   onMouseLeave={(e) => {
-                    e.target.style.backgroundColor = '#4A5D7A';
-                    e.target.style.transform = 'translateY(0)';
-                    e.target.style.boxShadow = 'none';
+                    const target = e.target as HTMLButtonElement;
+                    target.style.backgroundColor = '#4A5D7A';
+                    target.style.transform = 'translateY(0)';
+                    target.style.boxShadow = 'none';
                   }}
                 >
                   Call Us Now
@@ -125,16 +127,18 @@ export default function Home() {
                     transition: 'all 0.3s ease'
                   }}
                   onMouseEnter={(e) => {
-                    e.target.style.backgroundColor = '#4A5D7A';
-                    e.target.style.color = '#FFFFFF';
-                    e.target.style.transform = 'translateY(-2px)';
-                    e.target.style.boxShadow = '0 8px 25px rgba(74, 93, 122, 0.3)';
+                    const target = e.target as HTMLButtonElement;
+                    target.style.backgroundColor = '#4A5D7A';
+                    target.style.color = '#FFFFFF';
+                    target.style.transform = 'translateY(-2px)';
+                    target.style.boxShadow = '0 8px 25px rgba(74, 93, 122, 0.3)';
                   }}
                   onMouseLeave={(e) => {
-                    e.target.style.backgroundColor = 'transparent';
-                    e.target.style.color = '#4A5D7A';
-                    e.target.style.transform = 'translateY(0)';
-                    e.target.style.boxShadow = 'none';
+                    const target = e.target as HTMLButtonElement;
+                    target.style.backgroundColor = 'transparent';
+                    target.style.color = '#4A5D7A';
+                    target.style.transform = 'translateY(0)';
+                    target.style.boxShadow = 'none';
                   }}
                 >
                   About Us
