@@ -44,6 +44,18 @@ export default function ImprovedMobileNav({ currentPage }: ImprovedMobileNavProp
               Contact us
             </Link>
           </nav>
+          
+          {/* Debug content to verify rendering */}
+          <div style={{ 
+            background: 'red', 
+            color: 'white', 
+            padding: '10px', 
+            margin: '5px',
+            fontSize: '14px',
+            fontWeight: 'bold' 
+          }}>
+            DEBUG: Mobile nav is rendering
+          </div>
         </div>
       </details>
     </div>
