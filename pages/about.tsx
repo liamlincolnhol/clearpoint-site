@@ -2,6 +2,7 @@ import SEO from '../components/SEO'
 import CalcomFloatingButton from '../components/CalcomFloatingButton'
 import Link from 'next/link'
 import Image from 'next/image'
+import MobileNav from '../components/MobileNav'
 
 export default function About() {
   return (
@@ -26,38 +27,41 @@ export default function About() {
             />
           </div>
           
-          {/* Navigation */}
-          <nav style={{display: 'flex', gap: '2rem', alignItems: 'center'}}>
+          {/* Desktop Navigation */}
+          <nav className="desktop-nav" style={{display: 'flex', gap: '2rem', alignItems: 'center'}}>
             <Link href="/" style={{color: '#2C3E50', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '500'}}>Home</Link>
             <Link href="/services" style={{color: '#2C3E50', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '500'}}>Services</Link>
             <Link href="/about" style={{color: '#4A5D7A', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '600', borderBottom: '2px solid #4A5D7A', paddingBottom: '4px'}}>About us</Link>
             <Link href="/contact" style={{color: '#2C3E50', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '500'}}>Contact us</Link>
           </nav>
           
-          {/* CTA Button */}
-          <Link href="/booking">
-            <button style={{
-              backgroundColor: '#4A5D7A', 
-              color: '#FFFFFF', 
-              padding: '12px 24px', 
-              borderRadius: '8px', 
-              border: 'none', 
-              fontSize: '0.875rem', 
-              fontWeight: '500',
-              cursor: 'pointer'
-            }}>
-              Book Now
-            </button>
-          </Link>
+          {/* CTA Button + Mobile Nav */}
+          <div style={{display: 'flex', alignItems: 'center', gap: '1rem'}}>
+            <Link href="/booking">
+              <button style={{
+                backgroundColor: '#4A5D7A', 
+                color: '#FFFFFF', 
+                padding: '12px 24px', 
+                borderRadius: '8px', 
+                border: 'none', 
+                fontSize: '0.875rem', 
+                fontWeight: '500',
+                cursor: 'pointer'
+              }}>
+                Book Now
+              </button>
+            </Link>
+            <MobileNav currentPage="about" />
+          </div>
         </div>
       </header>
 
       {/* About Me Section */}
       <section style={{paddingTop: '160px', paddingBottom: '80px', backgroundColor: '#FFFFFF'}}>
         <div style={{maxWidth: '1280px', margin: '0 auto', padding: '0 1rem'}}>
-          <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center'}}>
+          <div className="about-grid" style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center'}}>
             <div>
-              <h1 style={{fontSize: '3rem', fontWeight: 'bold', color: '#2C3E50', marginBottom: '1.5rem'}}>
+              <h1 className="page-title" style={{fontSize: '3rem', fontWeight: 'bold', color: '#2C3E50', marginBottom: '1.5rem'}}>
                 About Me
               </h1>
               <div style={{display: 'flex', flexDirection: 'column', gap: '1rem', color: '#6C757D', fontSize: '1.125rem', lineHeight: '1.6'}}>
@@ -125,7 +129,7 @@ export default function About() {
             </h2>
           </div>
 
-          <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem', maxWidth: '900px', margin: '0 auto'}}>
+          <div className="three-col-grid" style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem', maxWidth: '900px', margin: '0 auto'}}>
             <div style={{textAlign: 'center'}}>
               <div style={{
                 width: '64px',

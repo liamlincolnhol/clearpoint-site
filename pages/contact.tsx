@@ -3,6 +3,7 @@ import CalcomFloatingButton from '../components/CalcomFloatingButton'
 import Link from 'next/link'
 import { useState } from 'react'
 import Image from 'next/image'
+import MobileNav from '../components/MobileNav'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -49,29 +50,32 @@ export default function Contact() {
             />
           </div>
           
-          {/* Navigation */}
-          <nav style={{display: 'flex', gap: '2rem', alignItems: 'center'}}>
+          {/* Desktop Navigation */}
+          <nav className="desktop-nav" style={{display: 'flex', gap: '2rem', alignItems: 'center'}}>
             <Link href="/" style={{color: '#2C3E50', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '500'}}>Home</Link>
             <Link href="/services" style={{color: '#2C3E50', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '500'}}>Services</Link>
             <Link href="/about" style={{color: '#2C3E50', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '500'}}>About us</Link>
             <Link href="/contact" style={{color: '#4A5D7A', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '600', borderBottom: '2px solid #4A5D7A', paddingBottom: '4px'}}>Contact us</Link>
           </nav>
           
-          {/* CTA Button */}
-          <Link href="/booking">
-            <button style={{
-              backgroundColor: '#4A5D7A', 
-              color: '#FFFFFF', 
-              padding: '12px 24px', 
-              borderRadius: '8px', 
-              border: 'none', 
-              fontSize: '0.875rem', 
-              fontWeight: '500',
-              cursor: 'pointer'
-            }}>
-              Book Now
-            </button>
-          </Link>
+          {/* CTA Button + Mobile Nav */}
+          <div style={{display: 'flex', alignItems: 'center', gap: '1rem'}}>
+            <Link href="/booking">
+              <button style={{
+                backgroundColor: '#4A5D7A', 
+                color: '#FFFFFF', 
+                padding: '12px 24px', 
+                borderRadius: '8px', 
+                border: 'none', 
+                fontSize: '0.875rem', 
+                fontWeight: '500',
+                cursor: 'pointer'
+              }}>
+                Book Now
+              </button>
+            </Link>
+            <MobileNav currentPage="contact" />
+          </div>
         </div>
       </header>
 
@@ -90,7 +94,7 @@ export default function Contact() {
       {/* Contact Information Cards */}
       <section style={{padding: '80px 0', backgroundColor: '#FFFFFF'}}>
         <div style={{maxWidth: '1280px', margin: '0 auto', padding: '0 1rem'}}>
-          <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', marginBottom: '4rem'}}>
+          <div className="three-col-grid" style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', marginBottom: '4rem'}}>
             
             {/* Phone */}
             <div style={{backgroundColor: '#FAF9F8', borderRadius: '8px', padding: '2rem', textAlign: 'center'}}>
@@ -146,7 +150,7 @@ export default function Contact() {
 
           <div style={{backgroundColor: '#FFFFFF', borderRadius: '12px', boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1)', padding: '3rem', border: '1px solid #FAF9F8'}}>
             <form onSubmit={handleSubmit}>
-              <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', marginBottom: '1.5rem'}}>
+              <div className="form-grid" style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', marginBottom: '1.5rem'}}>
                 <div>
                   <label style={{display: 'block', marginBottom: '0.5rem', fontWeight: '500', color: '#2C3E50'}}>
                     Full Name *
@@ -193,7 +197,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', marginBottom: '1.5rem'}}>
+              <div className="form-grid" style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', marginBottom: '1.5rem'}}>
                 <div>
                   <label style={{display: 'block', marginBottom: '0.5rem', fontWeight: '500', color: '#2C3E50'}}>
                     Phone Number
@@ -305,7 +309,7 @@ export default function Contact() {
             </h2>
           </div>
 
-          <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem', maxWidth: '900px', margin: '0 auto'}}>
+          <div className="three-col-grid" style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem', maxWidth: '900px', margin: '0 auto'}}>
             <div style={{textAlign: 'center'}}>
               <div style={{
                 width: '64px',
