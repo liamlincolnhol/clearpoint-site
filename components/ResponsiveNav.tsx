@@ -16,11 +16,8 @@ export default function ResponsiveNav({ currentPage }: ResponsiveNavProps) {
       <nav style={{
         display: 'flex', 
         gap: '2rem', 
-        alignItems: 'center',
-        '@media (max-width: 768px)': {
-          display: 'none'
-        }
-      } as any}>
+        alignItems: 'center'
+      }}>
         <Link href="/" style={{
           color: isHome ? '#4A5D7A' : '#2C3E50', 
           textDecoration: 'none', 
@@ -73,9 +70,6 @@ export default function ResponsiveNav({ currentPage }: ResponsiveNavProps) {
         value={`/${currentPage === 'home' ? '' : currentPage}`}
         style={{
           display: 'none',
-          '@media (max-width: 768px)': {
-            display: 'block'
-          },
           padding: '8px 12px',
           borderRadius: '6px',
           border: '1px solid #E5E7EB',
@@ -84,7 +78,7 @@ export default function ResponsiveNav({ currentPage }: ResponsiveNavProps) {
           fontSize: '0.875rem',
           fontWeight: '500',
           cursor: 'pointer'
-        } as any}
+        }}
       >
         <option value="/">Home</option>
         <option value="/services">Services</option>
