@@ -1,4 +1,6 @@
 
+import Link from 'next/link'
+
 interface ImprovedMobileNavProps {
   currentPage?: string
 }
@@ -18,7 +20,7 @@ export default function ImprovedMobileNav({ currentPage }: ImprovedMobileNavProp
         
         <div className="mobile-nav-content">
           <nav className="mobile-nav-menu">
-            <a 
+            <Link 
               href="/" 
               className={`mobile-nav-item ${currentPage === 'home' ? 'active' : ''}`}
               style={{
@@ -34,8 +36,8 @@ export default function ImprovedMobileNav({ currentPage }: ImprovedMobileNavProp
               }}
             >
               Home
-            </a>
-            <a 
+            </Link>
+            <Link 
               href="/services" 
               className={`mobile-nav-item ${currentPage === 'services' ? 'active' : ''}`}
               style={{
@@ -51,8 +53,8 @@ export default function ImprovedMobileNav({ currentPage }: ImprovedMobileNavProp
               }}
             >
               Services
-            </a>
-            <a 
+            </Link>
+            <Link 
               href="/about" 
               className={`mobile-nav-item ${currentPage === 'about' ? 'active' : ''}`}
               style={{
@@ -68,8 +70,8 @@ export default function ImprovedMobileNav({ currentPage }: ImprovedMobileNavProp
               }}
             >
               About us
-            </a>
-            <a 
+            </Link>
+            <Link 
               href="/contact" 
               className={`mobile-nav-item ${currentPage === 'contact' ? 'active' : ''}`}
               style={{
@@ -85,7 +87,7 @@ export default function ImprovedMobileNav({ currentPage }: ImprovedMobileNavProp
               }}
             >
               Contact us
-            </a>
+            </Link>
           </nav>
           
           {/* Debug content to verify rendering */}
