@@ -3,6 +3,7 @@ import CalcomFloatingButton from '../components/CalcomFloatingButton'
 import Link from 'next/link'
 import { useState } from 'react'
 import Image from 'next/image'
+import SimpleMobileNav from '../components/SimpleMobileNav'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -49,29 +50,32 @@ export default function Contact() {
             />
           </div>
           
-          {/* Navigation */}
-          <nav style={{display: 'flex', gap: '2rem', alignItems: 'center'}}>
+          {/* Desktop Navigation */}
+          <nav className="desktop-nav" style={{display: 'flex', gap: '2rem', alignItems: 'center'}}>
             <Link href="/" style={{color: '#2C3E50', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '500'}}>Home</Link>
             <Link href="/services" style={{color: '#2C3E50', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '500'}}>Services</Link>
             <Link href="/about" style={{color: '#2C3E50', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '500'}}>About us</Link>
             <Link href="/contact" style={{color: '#4A5D7A', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '600', borderBottom: '2px solid #4A5D7A', paddingBottom: '4px'}}>Contact us</Link>
           </nav>
           
-          {/* CTA Button */}
-          <Link href="/booking">
-            <button style={{
-              backgroundColor: '#4A5D7A', 
-              color: '#FFFFFF', 
-              padding: '12px 24px', 
-              borderRadius: '8px', 
-              border: 'none', 
-              fontSize: '0.875rem', 
-              fontWeight: '500',
-              cursor: 'pointer'
-            }}>
-              Book Now
-            </button>
-          </Link>
+          {/* CTA Button + Mobile Nav */}
+          <div style={{display: 'flex', alignItems: 'center', gap: '1rem'}}>
+            <Link href="/booking">
+              <button style={{
+                backgroundColor: '#4A5D7A', 
+                color: '#FFFFFF', 
+                padding: '12px 24px', 
+                borderRadius: '8px', 
+                border: 'none', 
+                fontSize: '0.875rem', 
+                fontWeight: '500',
+                cursor: 'pointer'
+              }}>
+                Book Now
+              </button>
+            </Link>
+            <SimpleMobileNav currentPage="contact" />
+          </div>
         </div>
       </header>
 
@@ -90,7 +94,7 @@ export default function Contact() {
       {/* Contact Information Cards */}
       <section style={{padding: '80px 0', backgroundColor: '#FFFFFF'}}>
         <div style={{maxWidth: '1280px', margin: '0 auto', padding: '0 1rem'}}>
-          <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', marginBottom: '4rem'}}>
+          <div className="three-col-grid" style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', marginBottom: '4rem'}}>
             
             {/* Phone */}
             <div style={{backgroundColor: '#FAF9F8', borderRadius: '8px', padding: '2rem', textAlign: 'center'}}>
@@ -135,18 +139,9 @@ export default function Contact() {
       {/* Contact Form */}
       <section style={{padding: '80px 0', backgroundColor: '#FAF9F8'}}>
         <div style={{maxWidth: '800px', margin: '0 auto', padding: '0 1rem'}}>
-          <div style={{textAlign: 'center', marginBottom: '3rem'}}>
-            <h2 style={{fontSize: '3rem', fontWeight: 'bold', color: '#2C3E50', marginBottom: '1rem'}}>
-              Get Your Free Quote
-            </h2>
-            <p style={{fontSize: '1.125rem', color: '#6C757D', maxWidth: '600px', margin: '0 auto'}}>
-              Tell us about your window cleaning needs and we'll get back to you with a personalized quote
-            </p>
-          </div>
-
           <div style={{backgroundColor: '#FFFFFF', borderRadius: '12px', boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1)', padding: '3rem', border: '1px solid #FAF9F8'}}>
             <form onSubmit={handleSubmit}>
-              <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', marginBottom: '1.5rem'}}>
+              <div className="form-grid" style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', marginBottom: '1.5rem'}}>
                 <div>
                   <label style={{display: 'block', marginBottom: '0.5rem', fontWeight: '500', color: '#2C3E50'}}>
                     Full Name *
@@ -193,7 +188,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', marginBottom: '1.5rem'}}>
+              <div className="form-grid" style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', marginBottom: '1.5rem'}}>
                 <div>
                   <label style={{display: 'block', marginBottom: '0.5rem', fontWeight: '500', color: '#2C3E50'}}>
                     Phone Number
@@ -296,69 +291,6 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section style={{padding: '80px 0', backgroundColor: '#FFFFFF'}}>
-        <div style={{maxWidth: '1280px', margin: '0 auto', padding: '0 1rem'}}>
-          <div style={{textAlign: 'center', marginBottom: '3rem'}}>
-            <h2 style={{fontSize: '3rem', fontWeight: 'bold', color: '#2C3E50', marginBottom: '1rem'}}>
-              Why Contact ClearPoint?
-            </h2>
-          </div>
-
-          <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem', maxWidth: '900px', margin: '0 auto'}}>
-            <div style={{textAlign: 'center'}}>
-              <div style={{
-                width: '64px',
-                height: '64px',
-                backgroundColor: '#4A5D7A',
-                borderRadius: '50%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                margin: '0 auto 1rem auto'
-              }}>
-                <span style={{fontSize: '2rem', color: '#FFFFFF'}}>⚡</span>
-              </div>
-              <h3 style={{fontSize: '1.25rem', fontWeight: '600', marginBottom: '0.5rem', color: '#2C3E50'}}>Quick Response</h3>
-              <p style={{color: '#6C757D', fontSize: '0.875rem'}}>We respond to all inquiries within 24 hours</p>
-            </div>
-
-            <div style={{textAlign: 'center'}}>
-              <div style={{
-                width: '64px',
-                height: '64px',
-                backgroundColor: '#4A5D7A',
-                borderRadius: '50%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                margin: '0 auto 1rem auto'
-              }}>
-                <span style={{fontSize: '2rem', color: '#FFFFFF'}}>📋</span>
-              </div>
-              <h3 style={{fontSize: '1.25rem', fontWeight: '600', marginBottom: '0.5rem', color: '#2C3E50'}}>Free Estimates</h3>
-              <p style={{color: '#6C757D', fontSize: '0.875rem'}}>All quotes are completely free with no obligations</p>
-            </div>
-
-            <div style={{textAlign: 'center'}}>
-              <div style={{
-                width: '64px',
-                height: '64px',
-                backgroundColor: '#4A5D7A',
-                borderRadius: '50%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                margin: '0 auto 1rem auto'
-              }}>
-                <span style={{fontSize: '2rem', color: '#FFFFFF'}}>🤝</span>
-              </div>
-              <h3 style={{fontSize: '1.25rem', fontWeight: '600', marginBottom: '0.5rem', color: '#2C3E50'}}>Personal Service</h3>
-              <p style={{color: '#6C757D', fontSize: '0.875rem'}}>Work directly with Mason for personalized attention</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Footer */}
       <footer style={{backgroundColor: '#FAF9F8', borderTop: '1px solid #FAF9F8', padding: '3rem 0'}}>

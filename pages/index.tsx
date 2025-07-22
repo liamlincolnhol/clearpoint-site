@@ -2,6 +2,8 @@ import SEO from '../components/SEO'
 import CalcomFloatingButton from '../components/CalcomFloatingButton'
 import Link from 'next/link'
 import Image from 'next/image'
+import SimpleMobileNav from '../components/SimpleMobileNav'
+import MobileNavScript from '../components/MobileNavScript'
 
 export default function Home() {
   return (
@@ -26,36 +28,39 @@ export default function Home() {
             />
           </div>
           
-          {/* Navigation */}
-          <nav style={{display: 'flex', gap: '2rem', alignItems: 'center'}}>
+          {/* Desktop Navigation */}
+          <nav className="desktop-nav" style={{display: 'flex', gap: '2rem', alignItems: 'center'}}>
             <Link href="/" style={{color: '#4A5D7A', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '600', borderBottom: '2px solid #4A5D7A', paddingBottom: '4px'}}>Home</Link>
             <Link href="/services" style={{color: '#2C3E50', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '500'}}>Services</Link>
             <Link href="/about" style={{color: '#2C3E50', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '500'}}>About us</Link>
             <Link href="/contact" style={{color: '#2C3E50', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '500'}}>Contact us</Link>
           </nav>
           
-          {/* CTA Button */}
-          <Link href="/booking">
-            <button style={{
-              backgroundColor: '#4A5D7A', 
-              color: '#FFFFFF', 
-              padding: '12px 24px', 
-              borderRadius: '8px', 
-              border: 'none', 
-              fontSize: '0.875rem', 
-              fontWeight: '500',
-              cursor: 'pointer'
-            }}>
-              Book Now
-            </button>
-          </Link>
+          {/* CTA Button + Mobile Nav */}
+          <div style={{display: 'flex', alignItems: 'center', gap: '1rem'}}>
+            <Link href="/booking">
+              <button style={{
+                backgroundColor: '#4A5D7A', 
+                color: '#FFFFFF', 
+                padding: '12px 24px', 
+                borderRadius: '8px', 
+                border: 'none', 
+                fontSize: '0.875rem', 
+                fontWeight: '500',
+                cursor: 'pointer'
+              }}>
+                Book Now
+              </button>
+            </Link>
+            <SimpleMobileNav currentPage="home" />
+          </div>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section style={{paddingTop: '160px', paddingBottom: '80px', backgroundImage: 'linear-gradient(rgba(248, 249, 250, 0.85), rgba(248, 249, 250, 0.85)), url(/images/photos/wash3.jpeg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}>
+      <section className="hero-section" style={{paddingTop: '160px', paddingBottom: '80px', backgroundImage: 'linear-gradient(rgba(248, 249, 250, 0.85), rgba(248, 249, 250, 0.85)), url(/images/photos/wash3.jpeg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}>
         <div style={{maxWidth: '1280px', margin: '0 auto', padding: '0 1rem'}}>
-          <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center'}}>
+          <div className="hero-grid" style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center'}}>
             {/* Left Column - Text Content */}
             <div>
               <p style={{
@@ -68,7 +73,7 @@ export default function Home() {
               }}>
                 WELCOME TO CLEARPOINT WINDOW SERVICES
               </p>
-              <h1 style={{
+              <h1 className="hero-title" style={{
                 fontSize: '4rem', 
                 fontWeight: 'bold', 
                 marginBottom: '1.5rem', 
@@ -156,9 +161,9 @@ export default function Home() {
       </section>
 
       {/* Services Overview */}
-      <section style={{padding: '80px 0', backgroundColor: '#FAF9F8'}}>
+      <section className="section-padding" style={{padding: '80px 0', backgroundColor: '#FAF9F8'}}>
         <div style={{maxWidth: '1280px', margin: '0 auto', padding: '0 1rem', textAlign: 'center'}}>
-          <h2 style={{
+          <h2 className="section-title" style={{
             fontSize: '3rem',
             fontWeight: 'bold',
             marginBottom: '1rem',
@@ -177,7 +182,7 @@ export default function Home() {
             If your windows are looking a little foggy, dusty, or just need a refresh, I'm here to help!
           </p>
 
-          <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '2rem', maxWidth: '1200px', margin: '0 auto'}}>
+          <div className="services-grid" style={{display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '2rem', maxWidth: '1200px', margin: '0 auto'}}>
             <div style={{backgroundColor: '#FFFFFF', borderRadius: '8px', boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1)', padding: '2rem', textAlign: 'center', border: '1px solid #FAF9F8', flex: '0 0 300px'}}>
               <div style={{fontSize: '3rem', marginBottom: '1rem'}}>🏠</div>
               <h3 style={{fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1rem', color: '#2C3E50'}}>Interior Only</h3>
@@ -204,7 +209,7 @@ export default function Home() {
               </button>
             </div>
 
-            <div style={{backgroundColor: '#FFFFFF', borderRadius: '8px', boxShadow: '0 15px 35px rgba(0, 0, 0, 0.15)', padding: '2.5rem', textAlign: 'center', border: '2px solid #4A5D7A', flex: '0 0 320px', transform: 'scale(1.05)'}}>
+            <div className="service-card" style={{backgroundColor: '#FFFFFF', borderRadius: '8px', boxShadow: '0 15px 35px rgba(0, 0, 0, 0.15)', padding: '2.5rem', textAlign: 'center', border: '2px solid #4A5D7A', flex: '0 0 320px', transform: 'scale(1.05)'}}>
               <div style={{fontSize: '3.5rem', marginBottom: '1rem'}}>✨</div>
               <h3 style={{fontSize: '1.75rem', fontWeight: 'bold', marginBottom: '1rem', color: '#2C3E50'}}>Complete Service</h3>
               <div style={{backgroundColor: '#4A5D7A', color: '#FFFFFF', padding: '4px 12px', borderRadius: '12px', fontSize: '0.75rem', fontWeight: '600', marginBottom: '1rem', display: 'inline-block'}}>BEST VALUE</div>
@@ -297,6 +302,7 @@ export default function Home() {
       </footer>
 
       <CalcomFloatingButton />
+      <MobileNavScript />
     </div>
   )
 }

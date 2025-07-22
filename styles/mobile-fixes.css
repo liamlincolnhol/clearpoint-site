@@ -1,0 +1,400 @@
+/* Mobile-First Quick Fixes */
+
+/* Improved CSS-Only Mobile Navigation */
+.improved-mobile-nav {
+  display: none;
+}
+
+/* Hide mobile nav on desktop, show only on mobile */
+.simple-mobile-nav {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .simple-mobile-nav {
+    display: block !important;
+  }
+}
+
+/* Also hide on larger screens with higher specificity */
+@media (min-width: 769px) {
+  .simple-mobile-nav {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
+/* Show mobile nav on all mobile screens */
+@media (max-width: 768px) {
+  .improved-mobile-nav {
+    display: block !important;
+    visibility: visible !important;
+  }
+}
+
+/* Additional backup for very small screens */
+@media (max-width: 480px) {
+  .improved-mobile-nav {
+    display: block !important;
+  }
+  
+  .desktop-nav,
+  nav.desktop-nav {
+    display: none !important;
+  }
+}
+
+.mobile-nav-details {
+  position: relative;
+}
+
+.mobile-nav-summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+}
+
+.mobile-nav-summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Animated hamburger icon */
+.hamburger-lines {
+  display: flex;
+  flex-direction: column;
+  width: 20px;
+  height: 16px;
+  justify-content: space-between;
+}
+
+.hamburger-lines span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #2C3E50;
+  transition: all 0.3s ease;
+}
+
+/* Animate hamburger when open */
+.mobile-nav-details[open] .hamburger-lines span:first-child {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.mobile-nav-details[open] .hamburger-lines span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-nav-details[open] .hamburger-lines span:last-child {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.mobile-nav-content {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  min-width: 200px;
+  background: #FAF9F8;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  padding: 0.5rem 0;
+  z-index: 9999;
+  margin-top: 8px;
+  animation: slideDown 0.2s ease-out;
+  /* Debug styles to make it more visible */
+  border: 2px solid #4A5D7A !important;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mobile-nav-menu {
+  display: flex !important;
+  flex-direction: column !important;
+  /* Debug styling */
+  background-color: #FAF9F8 !important;
+  padding: 8px !important;
+  min-height: 200px !important;
+}
+
+.mobile-nav-item {
+  display: block !important;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  transition: background-color 0.2s ease;
+  border-radius: 4px;
+  margin: 2px;
+  /* Very visible debug styling */
+  background-color: #4A5D7A !important;
+  border: 2px solid #2C3E50 !important;
+  min-height: 40px !important;
+  width: calc(100% - 8px) !important;
+}
+
+.mobile-nav-item:hover,
+.mobile-nav-item:focus {
+  background-color: rgba(74, 93, 122, 0.1);
+}
+
+.mobile-nav-item.active {
+  font-weight: 600;
+  color: #4A5D7A;
+  background-color: rgba(74, 93, 122, 0.15);
+}
+
+/* Simple CSS-Only Mobile Navigation (backup) */
+.simple-mobile-nav {
+  display: none;
+}
+
+.mobile-nav-dropdown {
+  position: relative;
+}
+
+.mobile-nav-toggle-simple {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 8px;
+  color: #2C3E50;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.mobile-nav-toggle-simple::-webkit-details-marker {
+  display: none;
+}
+
+.mobile-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  min-width: 200px;
+  background: #FAF9F8;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 0.5rem 0;
+  z-index: 50;
+  margin-top: 4px;
+}
+
+.mobile-nav-link {
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #2C3E50;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: background-color 0.2s;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link:focus {
+  background-color: rgba(74, 93, 122, 0.1);
+}
+
+.mobile-nav-link.active {
+  font-weight: 600;
+  color: #4A5D7A;
+  background-color: rgba(74, 93, 122, 0.1);
+}
+
+/* Hamburger Menu Styles (backup) */
+.mobile-nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 8px;
+  color: #2C3E50;
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  background: #FAF9F8;
+  border-top: 1px solid #E5E7EB;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 40;
+  padding: 1rem;
+}
+
+.mobile-menu.open {
+  display: block;
+}
+
+.mobile-menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mobile-menu-links a {
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #2C3E50;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.mobile-menu-links a:hover {
+  background-color: rgba(74, 93, 122, 0.1);
+}
+
+/* EMERGENCY Mobile Fix - Very Aggressive */
+@media screen and (max-width: 768px) {
+  /* Hide ALL desktop navigation on mobile - Multiple targeting approaches */
+  nav[style*="display: flex"],
+  nav[style*="gap: 2rem"],
+  nav[style*="display:flex"],
+  nav[style*="gap:2rem"],
+  .desktop-nav,
+  header nav,
+  nav.desktop-nav,
+  header .desktop-nav,
+  header nav[style*="flex"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+  }
+  
+  /* Show mobile navigation */
+  .improved-mobile-nav {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  /* Make header more compact */
+  header > div {
+    padding: 0 0.5rem !important;
+    gap: 0.5rem !important;
+  }
+  
+  /* Smaller "Book Now" button */
+  header button,
+  header a button {
+    padding: 6px 12px !important;
+    font-size: 0.75rem !important;
+  }
+  
+  /* Force mobile layout */
+  header {
+    padding: 0 !important;
+  }
+  
+  /* Grid Layout Fixes */
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+    text-align: left;
+  }
+  
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  
+  .before-after-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  
+  /* Stack before/after images vertically on mobile */
+  .before-after-grid > div[style*="grid-template-columns: 1fr 1fr"] {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+  
+  .three-col-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+  
+  /* Typography Scaling */
+  .hero-title {
+    font-size: 2.5rem !important;
+    line-height: 1.2 !important;
+  }
+  
+  .section-title {
+    font-size: 2rem !important;
+    line-height: 1.3 !important;
+  }
+  
+  .page-title {
+    font-size: 2.25rem !important;
+    line-height: 1.2 !important;
+  }
+  
+  /* Spacing Adjustments */
+  .hero-section {
+    padding-top: 120px !important;
+    padding-bottom: 40px !important;
+  }
+  
+  .section-padding {
+    padding: 40px 0 !important;
+  }
+  
+  /* Touch Targets */
+  button {
+    min-height: 44px !important;
+    padding: 12px 24px !important;
+  }
+  
+  /* Services Card Grid - Stack on Mobile */
+  .services-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 1.5rem !important;
+  }
+  
+  .service-card {
+    max-width: 100% !important;
+    transform: none !important;
+  }
+}
+
+/* Tablet Adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-title {
+    font-size: 3rem !important;
+  }
+  
+  .section-title {
+    font-size: 2.5rem !important;
+  }
+}

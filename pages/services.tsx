@@ -2,6 +2,7 @@ import SEO from '../components/SEO'
 import CalcomFloatingButton from '../components/CalcomFloatingButton'
 import Link from 'next/link'
 import Image from 'next/image'
+import SimpleMobileNav from '../components/SimpleMobileNav'
 
 export default function Services() {
 
@@ -27,29 +28,32 @@ export default function Services() {
             />
           </div>
           
-          {/* Navigation */}
-          <nav style={{display: 'flex', gap: '2rem', alignItems: 'center'}}>
+          {/* Desktop Navigation */}
+          <nav className="desktop-nav" style={{display: 'flex', gap: '2rem', alignItems: 'center'}}>
             <Link href="/" style={{color: '#2C3E50', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '500'}}>Home</Link>
             <Link href="/services" style={{color: '#4A5D7A', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '600', borderBottom: '2px solid #4A5D7A', paddingBottom: '4px'}}>Services</Link>
             <Link href="/about" style={{color: '#2C3E50', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '500'}}>About us</Link>
             <Link href="/contact" style={{color: '#2C3E50', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '500'}}>Contact us</Link>
           </nav>
           
-          {/* CTA Button */}
-          <Link href="/booking">
-            <button style={{
-              backgroundColor: '#4A5D7A', 
-              color: '#FFFFFF', 
-              padding: '12px 24px', 
-              borderRadius: '8px', 
-              border: 'none', 
-              fontSize: '0.875rem', 
-              fontWeight: '500',
-              cursor: 'pointer'
-            }}>
-              Book Now
-            </button>
-          </Link>
+          {/* CTA Button + Mobile Nav */}
+          <div style={{display: 'flex', alignItems: 'center', gap: '1rem'}}>
+            <Link href="/booking">
+              <button style={{
+                backgroundColor: '#4A5D7A', 
+                color: '#FFFFFF', 
+                padding: '12px 24px', 
+                borderRadius: '8px', 
+                border: 'none', 
+                fontSize: '0.875rem', 
+                fontWeight: '500',
+                cursor: 'pointer'
+              }}>
+                Book Now
+              </button>
+            </Link>
+            <SimpleMobileNav currentPage="services" />
+          </div>
         </div>
       </header>
 
@@ -57,7 +61,7 @@ export default function Services() {
       <section style={{paddingTop: '90px', paddingBottom: '10px', backgroundColor: '#F8F9FA'}}>
         <div style={{maxWidth: '1280px', margin: '0 auto', padding: '0 1rem'}}>
           <div style={{textAlign: 'center', marginBottom: '4rem'}}>
-            <h1 style={{fontSize: '4rem', fontWeight: 'bold', color: '#2C3E50', marginBottom: '1rem'}}>
+            <h1 className="hero-title" style={{fontSize: '4rem', fontWeight: 'bold', color: '#2C3E50', marginBottom: '1rem'}}>
               Our Work
             </h1>
             <p style={{fontSize: '1.25rem', color: '#6C757D', maxWidth: '600px', margin: '0 auto'}}>
@@ -65,7 +69,7 @@ export default function Services() {
             </p>
           </div>
 
-          <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '3rem', marginBottom: '3rem'}}>
+          <div className="before-after-grid" style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '3rem', marginBottom: '3rem'}}>
             
             {/* Before/After Comparison 1 */}
             <div style={{backgroundColor: '#FFFFFF', borderRadius: '12px', padding: '2rem', border: '1px solid #E5E7EB', boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1)'}}>
@@ -158,7 +162,7 @@ export default function Services() {
           </div>
 
           {/* Service Process Photos */}
-          <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem'}}>
+          <div className="three-col-grid" style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem'}}>
             
             <div style={{textAlign: 'center'}}>
               <Image 
