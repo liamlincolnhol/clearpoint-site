@@ -1,10 +1,11 @@
 import { useState } from 'react'
+import Link from 'next/link'
 
 interface SimpleMobileNavProps {
   currentPage?: string
 }
 
-export default function SimpleMobileNav({ currentPage }: SimpleMobileNavProps) {
+export default function SimpleMobileNav({ }: SimpleMobileNavProps) {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
@@ -45,7 +46,7 @@ export default function SimpleMobileNav({ currentPage }: SimpleMobileNavProps) {
           zIndex: 1000,
           marginTop: '8px'
         }}>
-          <a 
+          <Link 
             href="/" 
             onClick={() => setIsOpen(false)}
             style={{
@@ -57,8 +58,8 @@ export default function SimpleMobileNav({ currentPage }: SimpleMobileNavProps) {
             }}
           >
             Home
-          </a>
-          <a 
+          </Link>
+          <Link 
             href="/services" 
             onClick={() => setIsOpen(false)}
             style={{
@@ -70,8 +71,8 @@ export default function SimpleMobileNav({ currentPage }: SimpleMobileNavProps) {
             }}
           >
             Services
-          </a>
-          <a 
+          </Link>
+          <Link 
             href="/about" 
             onClick={() => setIsOpen(false)}
             style={{
@@ -83,8 +84,8 @@ export default function SimpleMobileNav({ currentPage }: SimpleMobileNavProps) {
             }}
           >
             About us
-          </a>
-          <a 
+          </Link>
+          <Link 
             href="/contact" 
             onClick={() => setIsOpen(false)}
             style={{
@@ -95,7 +96,7 @@ export default function SimpleMobileNav({ currentPage }: SimpleMobileNavProps) {
             }}
           >
             Contact us
-          </a>
+          </Link>
         </div>
       )}
     </div>
