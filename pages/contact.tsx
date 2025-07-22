@@ -1,38 +1,16 @@
 import SEO from '../components/SEO'
 import Link from 'next/link'
-import { useState } from 'react'
 import Image from 'next/image'
 import SimpleMobileNav from '../components/SimpleMobileNav'
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: ''
-  })
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }))
-  }
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    alert('Thank you for your message! Mason will get back to you within 24 hours.')
-    console.log('Contact form data:', formData)
-  }
 
   return (
     <div style={{backgroundColor: '#F8F9FA', minHeight: '100vh'}}>
       <SEO
         title="Contact ClearPoint Window Services - Get Your Free Quote"
-        description="Contact Mason Rose at ClearPoint Window Services for professional window cleaning. Get your free quote today!"
-        keywords="contact, window cleaning, free quote, Mason Rose, ClearPoint"
+        description="Contact ClearPoint Window Services for professional window cleaning. Get your free quote today!"
+        keywords="contact, window cleaning, free quote, ClearPoint"
       />
 
       {/* Navigation Header */}
@@ -71,7 +49,7 @@ export default function Contact() {
             Contact Us
           </h1>
           <p style={{fontSize: '1.25rem', marginBottom: '2rem', maxWidth: '42rem', margin: '0 auto 2rem auto', lineHeight: '1.6', color: '#6C757D'}}>
-            Ready to get your windows sparkling clean? Get in touch with Mason for a free quote and let's discuss your window cleaning needs.
+            Ready to get your windows sparkling clean? Get in touch for a free quote and let's discuss your window cleaning needs.
           </p>
         </div>
       </section>
@@ -109,160 +87,6 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Contact Form */}
-      <section style={{padding: '80px 0', backgroundColor: '#FAF9F8'}}>
-        <div style={{maxWidth: '800px', margin: '0 auto', padding: '0 1rem'}}>
-          <div style={{backgroundColor: '#FFFFFF', borderRadius: '12px', boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1)', padding: '3rem', border: '1px solid #FAF9F8'}}>
-            <form onSubmit={handleSubmit}>
-              <div className="form-grid" style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', marginBottom: '1.5rem'}}>
-                <div>
-                  <label style={{display: 'block', marginBottom: '0.5rem', fontWeight: '500', color: '#2C3E50'}}>
-                    Full Name *
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    required
-                    style={{
-                      width: '100%',
-                      padding: '14px',
-                      border: '1px solid #FAF9F8',
-                      borderRadius: '8px',
-                      fontSize: '1rem',
-                      backgroundColor: '#FAF9F8',
-                      color: '#6C757D',
-                      fontFamily: 'inherit'
-                    }}
-                  />
-                </div>
-                <div>
-                  <label style={{display: 'block', marginBottom: '0.5rem', fontWeight: '500', color: '#2C3E50'}}>
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                    style={{
-                      width: '100%',
-                      padding: '14px',
-                      border: '1px solid #FAF9F8',
-                      borderRadius: '8px',
-                      fontSize: '1rem',
-                      backgroundColor: '#FAF9F8',
-                      color: '#6C757D',
-                      fontFamily: 'inherit'
-                    }}
-                  />
-                </div>
-              </div>
-
-              <div className="form-grid" style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', marginBottom: '1.5rem'}}>
-                <div>
-                  <label style={{display: 'block', marginBottom: '0.5rem', fontWeight: '500', color: '#2C3E50'}}>
-                    Phone Number
-                  </label>
-                  <input
-                    type="tel"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    style={{
-                      width: '100%',
-                      padding: '14px',
-                      border: '1px solid #FAF9F8',
-                      borderRadius: '8px',
-                      fontSize: '1rem',
-                      backgroundColor: '#FAF9F8',
-                      color: '#6C757D',
-                      fontFamily: 'inherit'
-                    }}
-                  />
-                </div>
-                <div>
-                  <label style={{display: 'block', marginBottom: '0.5rem', fontWeight: '500', color: '#2C3E50'}}>
-                    Subject
-                  </label>
-                  <select
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleInputChange}
-                    style={{
-                      width: '100%',
-                      padding: '14px',
-                      border: '1px solid #FAF9F8',
-                      borderRadius: '8px',
-                      fontSize: '1rem',
-                      backgroundColor: '#FAF9F8',
-                      color: '#6C757D',
-                      fontFamily: 'inherit'
-                    }}
-                  >
-                    <option value="">Select a topic</option>
-                    <option value="quote">Request a Quote</option>
-                    <option value="general">General Question</option>
-                    <option value="scheduling">Scheduling</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-              </div>
-
-              <div style={{marginBottom: '2rem'}}>
-                <label style={{display: 'block', marginBottom: '0.5rem', fontWeight: '500', color: '#2C3E50'}}>
-                  Your Message *
-                </label>
-                <textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  required
-                  rows={6}
-                  placeholder="Tell us about your window cleaning needs, number of windows, preferred scheduling, or any questions you have..."
-                  style={{
-                    width: '100%',
-                    padding: '14px',
-                    border: '1px solid #FAF9F8',
-                    borderRadius: '8px',
-                    fontSize: '1rem',
-                    backgroundColor: '#FAF9F8',
-                    color: '#6C757D',
-                    fontFamily: 'inherit',
-                    resize: 'vertical'
-                  }}
-                />
-              </div>
-
-              <div style={{textAlign: 'center'}}>
-                <button
-                  type="submit"
-                  style={{
-                    backgroundColor: '#4A5D7A',
-                    color: '#FFFFFF',
-                    padding: '16px 48px',
-                    borderRadius: '8px',
-                    border: 'none',
-                    fontSize: '1.125rem',
-                    fontWeight: '600',
-                    cursor: 'pointer',
-                    transition: 'opacity 0.2s ease'
-                  }}
-                  onMouseEnter={(e) => (e.target as HTMLButtonElement).style.opacity = '0.9'}
-                  onMouseLeave={(e) => (e.target as HTMLButtonElement).style.opacity = '1'}
-                >
-                  Send Message
-                </button>
-                <p style={{fontSize: '0.875rem', color: '#6C757D', marginTop: '1rem'}}>
-                  We'll respond to your message within 24 hours
-                </p>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
 
 
       {/* Footer */}
@@ -283,7 +107,7 @@ export default function Contact() {
               <p style={{fontSize: '0.875rem', color: '#6C757D'}}>
                 © 2025 ClearPoint Window Services. All rights reserved.
               </p>
-              <p style={{fontWeight: '600', fontSize: '1.125rem', color: '#4A5D7A', textAlign: 'center'}}>Contact Mason for Free Quote</p>
+              <p style={{fontWeight: '600', fontSize: '1.125rem', color: '#4A5D7A', textAlign: 'center'}}>Contact Us for Free Quote</p>
               <Link href="/contact">
                 <button style={{
                   backgroundColor: '#4A5D7A',
