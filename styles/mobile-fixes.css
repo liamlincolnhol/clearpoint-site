@@ -5,6 +5,17 @@
   display: none;
 }
 
+/* Hide mobile nav on desktop, show only on mobile */
+.simple-mobile-nav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .simple-mobile-nav {
+    display: block !important;
+  }
+}
+
 /* Show mobile nav on all mobile screens */
 @media (max-width: 768px) {
   .improved-mobile-nav {

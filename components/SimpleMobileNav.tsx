@@ -9,7 +9,7 @@ export default function SimpleMobileNav({ }: SimpleMobileNavProps) {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
+    <div className="simple-mobile-nav" style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
       {/* Hamburger Button */}
       <button 
         onClick={() => setIsOpen(!isOpen)}
