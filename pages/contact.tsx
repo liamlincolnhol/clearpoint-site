@@ -1,5 +1,4 @@
 import SEO from '../components/SEO'
-import CalcomFloatingButton from '../components/CalcomFloatingButton'
 import Link from 'next/link'
 import { useState } from 'react'
 import Image from 'next/image'
@@ -58,22 +57,8 @@ export default function Contact() {
             <Link href="/contact" style={{color: '#4A5D7A', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '600', borderBottom: '2px solid #4A5D7A', paddingBottom: '4px'}}>Contact us</Link>
           </nav>
           
-          {/* CTA Button + Mobile Nav */}
+          {/* Mobile Nav */}
           <div style={{display: 'flex', alignItems: 'center', gap: '1rem'}}>
-            <Link href="/booking">
-              <button style={{
-                backgroundColor: '#4A5D7A', 
-                color: '#FFFFFF', 
-                padding: '12px 24px', 
-                borderRadius: '8px', 
-                border: 'none', 
-                fontSize: '0.875rem', 
-                fontWeight: '500',
-                cursor: 'pointer'
-              }}>
-                Book Now
-              </button>
-            </Link>
             <SimpleMobileNav currentPage="contact" />
           </div>
         </div>
@@ -94,29 +79,17 @@ export default function Contact() {
       {/* Contact Information Cards */}
       <section style={{padding: '80px 0', backgroundColor: '#FFFFFF'}}>
         <div style={{maxWidth: '1280px', margin: '0 auto', padding: '0 1rem'}}>
-          <div className="three-col-grid" style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', marginBottom: '4rem'}}>
+          <div className="two-col-grid" style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', marginBottom: '4rem', justifyContent: 'center', maxWidth: '800px', margin: '0 auto 4rem auto'}}>
             
             {/* Phone */}
             <div style={{backgroundColor: '#FAF9F8', borderRadius: '8px', padding: '2rem', textAlign: 'center'}}>
               <div style={{fontSize: '3rem', marginBottom: '1rem'}}>📞</div>
               <h3 style={{fontSize: '1.5rem', fontWeight: '600', marginBottom: '1rem', color: '#2C3E50'}}>Call Us</h3>
               <p style={{fontSize: '1.125rem', color: '#4A5D7A', fontWeight: '600', marginBottom: '0.5rem'}}>
-                Coming Soon
+                (616) 690-8576
               </p>
               <p style={{fontSize: '0.875rem', color: '#6C757D'}}>
                 Available 7 days a week
-              </p>
-            </div>
-
-            {/* Email */}
-            <div style={{backgroundColor: '#FAF9F8', borderRadius: '8px', padding: '2rem', textAlign: 'center'}}>
-              <div style={{fontSize: '3rem', marginBottom: '1rem'}}>📧</div>
-              <h3 style={{fontSize: '1.5rem', fontWeight: '600', marginBottom: '1rem', color: '#2C3E50'}}>Email Us</h3>
-              <p style={{fontSize: '1.125rem', color: '#4A5D7A', fontWeight: '600', marginBottom: '0.5rem'}}>
-                mason@clearpointwindows.com
-              </p>
-              <p style={{fontSize: '0.875rem', color: '#6C757D'}}>
-                We respond within 24 hours
               </p>
             </div>
 
@@ -311,24 +284,25 @@ export default function Contact() {
                 © 2025 ClearPoint Window Services. All rights reserved.
               </p>
               <p style={{fontWeight: '600', fontSize: '1.125rem', color: '#4A5D7A', textAlign: 'center'}}>Contact Mason for Free Quote</p>
-              <button style={{
-                backgroundColor: '#4A5D7A',
-                color: '#FFFFFF',
-                padding: '12px 24px',
-                borderRadius: '8px',
-                border: 'none',
-                fontSize: '0.875rem',
-                fontWeight: '500',
-                cursor: 'pointer'
-              }}>
-                Get Free Quote
-              </button>
+              <Link href="/contact">
+                <button style={{
+                  backgroundColor: '#4A5D7A',
+                  color: '#FFFFFF',
+                  padding: '12px 24px',
+                  borderRadius: '8px',
+                  border: 'none',
+                  fontSize: '0.875rem',
+                  fontWeight: '500',
+                  cursor: 'pointer'
+                }}>
+                  Get Free Quote
+                </button>
+              </Link>
             </div>
           </div>
         </div>
       </footer>
 
-      <CalcomFloatingButton />
     </div>
   )
 }

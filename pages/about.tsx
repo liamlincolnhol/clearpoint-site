@@ -1,5 +1,4 @@
 import SEO from '../components/SEO'
-import CalcomFloatingButton from '../components/CalcomFloatingButton'
 import Link from 'next/link'
 import Image from 'next/image'
 import SimpleMobileNav from '../components/SimpleMobileNav'
@@ -35,22 +34,8 @@ export default function About() {
             <Link href="/contact" style={{color: '#2C3E50', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '500'}}>Contact us</Link>
           </nav>
           
-          {/* CTA Button + Mobile Nav */}
+          {/* Mobile Nav */}
           <div style={{display: 'flex', alignItems: 'center', gap: '1rem'}}>
-            <Link href="/booking">
-              <button style={{
-                backgroundColor: '#4A5D7A', 
-                color: '#FFFFFF', 
-                padding: '12px 24px', 
-                borderRadius: '8px', 
-                border: 'none', 
-                fontSize: '0.875rem', 
-                fontWeight: '500',
-                cursor: 'pointer'
-              }}>
-                Book Now
-              </button>
-            </Link>
             <SimpleMobileNav currentPage="about" />
           </div>
         </div>
@@ -203,24 +188,25 @@ export default function About() {
                 © 2025 ClearPoint Window Services. All rights reserved.
               </p>
               <p style={{fontWeight: '600', fontSize: '1.125rem', color: '#4A5D7A', textAlign: 'center'}}>Contact Mason for Free Quote</p>
-              <button style={{
-                backgroundColor: '#4A5D7A',
-                color: '#FFFFFF',
-                padding: '12px 24px',
-                borderRadius: '8px',
-                border: 'none',
-                fontSize: '0.875rem',
-                fontWeight: '500',
-                cursor: 'pointer'
-              }}>
-                Get Free Quote
-              </button>
+              <Link href="/contact">
+                <button style={{
+                  backgroundColor: '#4A5D7A',
+                  color: '#FFFFFF',
+                  padding: '12px 24px',
+                  borderRadius: '8px',
+                  border: 'none',
+                  fontSize: '0.875rem',
+                  fontWeight: '500',
+                  cursor: 'pointer'
+                }}>
+                  Get Free Quote
+                </button>
+              </Link>
             </div>
           </div>
         </div>
       </footer>
 
-      <CalcomFloatingButton />
     </div>
   )
 }
