@@ -2,7 +2,7 @@ import SEO from '../components/SEO'
 import CalcomFloatingButton from '../components/CalcomFloatingButton'
 import Link from 'next/link'
 import Image from 'next/image'
-import ImprovedMobileNav from '../components/ImprovedMobileNav'
+import SimpleMobileNav from '../components/SimpleMobileNav'
 import MobileNavScript from '../components/MobileNavScript'
 
 export default function Home() {
@@ -52,7 +52,7 @@ export default function Home() {
                 Book Now
               </button>
             </Link>
-            <ImprovedMobileNav currentPage="home" />
+            <SimpleMobileNav currentPage="home" />
           </div>
         </div>
       </header>
