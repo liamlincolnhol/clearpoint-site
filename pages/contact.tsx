@@ -3,7 +3,7 @@ import CalcomFloatingButton from '../components/CalcomFloatingButton'
 import Link from 'next/link'
 import { useState } from 'react'
 import Image from 'next/image'
-import ImprovedMobileNav from '../components/ImprovedMobileNav'
+import SimpleMobileNav from '../components/SimpleMobileNav'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -74,7 +74,7 @@ export default function Contact() {
                 Book Now
               </button>
             </Link>
-            <ImprovedMobileNav currentPage="contact" />
+            <SimpleMobileNav currentPage="contact" />
           </div>
         </div>
       </header>

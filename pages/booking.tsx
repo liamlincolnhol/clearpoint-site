@@ -3,7 +3,7 @@ import CalcomFloatingButton from '../components/CalcomFloatingButton'
 import Link from 'next/link'
 import { useState } from 'react'
 import Image from 'next/image'
-import ImprovedMobileNav from '../components/ImprovedMobileNav'
+import SimpleMobileNav from '../components/SimpleMobileNav'
 
 export default function Booking() {
   const [formData, setFormData] = useState({
@@ -65,7 +65,7 @@ export default function Booking() {
           </nav>
           
           {/* Mobile Navigation */}
-          <ImprovedMobileNav currentPage="booking" />
+          <SimpleMobileNav currentPage="booking" />
           
           {/* CTA Button */}
           <Link href="/booking">
