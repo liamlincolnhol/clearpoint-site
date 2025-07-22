@@ -7,12 +7,20 @@
 
 /* Hide mobile nav on desktop, show only on mobile */
 .simple-mobile-nav {
-  display: none;
+  display: none !important;
 }
 
 @media (max-width: 768px) {
   .simple-mobile-nav {
     display: block !important;
+  }
+}
+
+/* Also hide on larger screens with higher specificity */
+@media (min-width: 769px) {
+  .simple-mobile-nav {
+    display: none !important;
+    visibility: hidden !important;
   }
 }
 
