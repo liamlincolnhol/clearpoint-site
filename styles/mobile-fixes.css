@@ -403,6 +403,12 @@
     max-width: 100% !important;
     transform: none !important;
   }
+  
+  /* Work page layout - Stack images below before/after on mobile */
+  .work-layout {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
 }
 
 /* Tablet Adjustments */

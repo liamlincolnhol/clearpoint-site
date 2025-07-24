@@ -30,9 +30,9 @@ export default function Services() {
           {/* Desktop Navigation */}
           <nav className="desktop-nav" style={{display: 'flex', gap: '2rem', alignItems: 'center'}}>
             <Link href="/" style={{color: '#2C3E50', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '500'}}>Home</Link>
-            <Link href="/services" style={{color: '#4A5D7A', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '600', borderBottom: '2px solid #4A5D7A', paddingBottom: '4px'}}>Services</Link>
-            <Link href="/about" style={{color: '#2C3E50', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '500'}}>About us</Link>
-            <Link href="/contact" style={{color: '#2C3E50', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '500'}}>Contact us</Link>
+            <Link href="/services/" style={{color: '#4A5D7A', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '600', borderBottom: '2px solid #4A5D7A', paddingBottom: '4px'}}>Our Work</Link>
+            <Link href="/about/" style={{color: '#2C3E50', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '500'}}>About us</Link>
+            <Link href="/contact/" style={{color: '#2C3E50', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '500'}}>Contact us</Link>
           </nav>
           
           {/* Mobile Nav */}
@@ -45,25 +45,25 @@ export default function Services() {
       {/* Our Work Gallery - Hero Section */}
       <section style={{paddingTop: '90px', paddingBottom: '10px', backgroundColor: '#F8F9FA'}}>
         <div style={{maxWidth: '1280px', margin: '0 auto', padding: '0 1rem'}}>
-          <div style={{textAlign: 'center', marginBottom: '4rem'}}>
+          <div style={{textAlign: 'left', marginBottom: '4rem'}}>
             <h1 className="hero-title" style={{fontSize: '4rem', fontWeight: 'bold', color: '#2C3E50', marginBottom: '1rem'}}>
               Our Work
             </h1>
-            <p style={{fontSize: '1.25rem', color: '#6C757D', maxWidth: '600px', margin: '0 auto'}}>
+            <p style={{fontSize: '1.25rem', color: '#6C757D', maxWidth: '600px'}}>
               See the difference professional window cleaning makes. Before and after photos from our recent jobs.
             </p>
           </div>
 
-          <div className="before-after-grid" style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '3rem', marginBottom: '3rem'}}>
+          {/* Before/After and Process Photos - Two Column Layout */}
+          <div className="work-layout" style={{display: 'grid', gridTemplateColumns: '2.6fr 1fr', gap: '4rem', alignItems: 'start', marginBottom: '3rem'}}>
             
-            {/* Before/After Comparison 1 */}
-            <div style={{backgroundColor: '#FFFFFF', borderRadius: '12px', padding: '2rem', border: '1px solid #E5E7EB', boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1)'}}>
-              <h3 style={{fontSize: '1.5rem', fontWeight: '600', marginBottom: '1.5rem', color: '#2C3E50', textAlign: 'center'}}>
-                Residential Window Transformation
-              </h3>
-              <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1rem'}}>
+            {/* Left Column - Before/After Gallery */}
+            <div style={{backgroundColor: '#4A5D7A', borderRadius: '12px', padding: '2rem', border: '1px solid #E5E7EB', boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1)'}}>
+              
+              {/* Before/After Pair 1 */}
+              <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1.75rem'}}>
                 <div>
-                  <p style={{fontSize: '0.875rem', fontWeight: '600', marginBottom: '0.5rem', color: '#6C757D', textAlign: 'center'}}>BEFORE</p>
+                  <p style={{fontSize: '0.875rem', fontWeight: '600', marginBottom: '0.5rem', color: '#FFFFFF', textAlign: 'center'}}>BEFORE</p>
                   <Image 
                     src="/images/photos/before1.jpg" 
                     alt="Before window cleaning" 
@@ -79,7 +79,7 @@ export default function Services() {
                   />
                 </div>
                 <div>
-                  <p style={{fontSize: '0.875rem', fontWeight: '600', marginBottom: '0.5rem', color: '#4A5D7A', textAlign: 'center'}}>AFTER</p>
+                  <p style={{fontSize: '0.875rem', fontWeight: '600', marginBottom: '0.5rem', color: '#FFFFFF', textAlign: 'center'}}>AFTER</p>
                   <Image 
                     src="/images/photos/after1.jpeg" 
                     alt="After window cleaning" 
@@ -90,24 +90,19 @@ export default function Services() {
                       height: 'auto',
                       objectFit: 'cover',
                       borderRadius: '8px',
-                      border: '2px solid #4A5D7A'
+                      border: '2px solid #FFFFFF'
                     }}
                   />
                 </div>
               </div>
-              <p style={{fontSize: '0.875rem', color: '#6C757D', textAlign: 'center', fontStyle: 'italic'}}>
+              <p style={{fontSize: '0.875rem', color: '#FFFFFF', textAlign: 'center', fontStyle: 'italic', marginBottom: '1.75rem'}}>
                 Complete interior and exterior window cleaning service
               </p>
-            </div>
 
-            {/* Before/After Comparison 2 */}
-            <div style={{backgroundColor: '#FFFFFF', borderRadius: '12px', padding: '2rem', border: '1px solid #E5E7EB', boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1)'}}>
-              <h3 style={{fontSize: '1.5rem', fontWeight: '600', marginBottom: '1.5rem', color: '#2C3E50', textAlign: 'center'}}>
-                Home Window Restoration
-              </h3>
+              {/* Before/After Pair 2 */}
               <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1rem'}}>
                 <div>
-                  <p style={{fontSize: '0.875rem', fontWeight: '600', marginBottom: '0.5rem', color: '#6C757D', textAlign: 'center'}}>BEFORE</p>
+                  <p style={{fontSize: '0.875rem', fontWeight: '600', marginBottom: '0.5rem', color: '#FFFFFF', textAlign: 'center'}}>BEFORE</p>
                   <Image 
                     src="/images/photos/before2.jpeg" 
                     alt="Before window cleaning" 
@@ -123,7 +118,7 @@ export default function Services() {
                   />
                 </div>
                 <div>
-                  <p style={{fontSize: '0.875rem', fontWeight: '600', marginBottom: '0.5rem', color: '#4A5D7A', textAlign: 'center'}}>AFTER</p>
+                  <p style={{fontSize: '0.875rem', fontWeight: '600', marginBottom: '0.5rem', color: '#FFFFFF', textAlign: 'center'}}>AFTER</p>
                   <Image 
                     src="/images/photos/after2.jpg" 
                     alt="After window cleaning" 
@@ -134,90 +129,67 @@ export default function Services() {
                       height: 'auto',
                       objectFit: 'cover',
                       borderRadius: '8px',
-                      border: '2px solid #4A5D7A'
+                      border: '2px solid #FFFFFF'
                     }}
                   />
                 </div>
               </div>
-              <p style={{fontSize: '0.875rem', color: '#6C757D', textAlign: 'center', fontStyle: 'italic'}}>
+              <p style={{fontSize: '0.875rem', color: '#FFFFFF', textAlign: 'center', fontStyle: 'italic'}}>
                 Professional cleaning removes years of buildup
               </p>
+
             </div>
 
-          </div>
+            {/* Right Column - Process Photos */}
+            <div style={{display: 'flex', flexDirection: 'column', gap: '1.5rem'}}>
 
-          {/* Service Process Photos */}
-          <div className="three-col-grid" style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem'}}>
-            
-            <div style={{textAlign: 'center'}}>
-              <Image 
-                src="/images/photos/wash1.jpeg" 
-                alt="Professional window cleaning in action" 
-                width={300}
-                height={225}
-                style={{
-                  width: '100%',
-                  height: 'auto',
-                  objectFit: 'cover',
-                  borderRadius: '12px',
-                  boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1)',
-                  marginBottom: '1rem'
-                }}
-              />
-              <h4 style={{fontSize: '1.25rem', fontWeight: '600', marginBottom: '0.5rem', color: '#2C3E50'}}>
-                Professional Equipment
-              </h4>
-              <p style={{fontSize: '0.875rem', color: '#6C757D'}}>
-                Using the right tools for streak-free results
-              </p>
+              <div style={{textAlign: 'center', backgroundColor: '#FFFFFF', borderRadius: '12px', padding: '1.5rem', border: '1px solid #E5E7EB', boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1)'}}>
+                <Image 
+                  src="/images/photos/wash2.jpeg" 
+                  alt="Quality window cleaning technique" 
+                  width={250}
+                  height={188}
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                    objectFit: 'cover',
+                    borderRadius: '12px',
+                    boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1)',
+                    marginBottom: '1rem'
+                  }}
+                />
+                <h4 style={{fontSize: '1.25rem', fontWeight: '600', marginBottom: '0.5rem', color: '#2C3E50'}}>
+                  Attention to Detail
+                </h4>
+                <p style={{fontSize: '0.875rem', color: '#6C757D'}}>
+                  Thorough cleaning of every corner and frame
+                </p>
+              </div>
+
+              <div style={{textAlign: 'center', backgroundColor: '#FFFFFF', borderRadius: '12px', padding: '1.5rem', border: '1px solid #E5E7EB', boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1)'}}>
+                <Image 
+                  src="/images/photos/house1.jpeg" 
+                  alt="Beautiful home with clean windows" 
+                  width={250}
+                  height={188}
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                    objectFit: 'cover',
+                    borderRadius: '12px',
+                    boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1)',
+                    marginBottom: '1rem'
+                  }}
+                />
+                <h4 style={{fontSize: '1.25rem', fontWeight: '600', marginBottom: '0.5rem', color: '#2C3E50'}}>
+                  Enhanced Curb Appeal
+                </h4>
+                <p style={{fontSize: '0.875rem', color: '#6C757D'}}>
+                  Clean windows make your home shine
+                </p>
+              </div>
+
             </div>
-
-            <div style={{textAlign: 'center'}}>
-              <Image 
-                src="/images/photos/wash2.jpeg" 
-                alt="Quality window cleaning technique" 
-                width={300}
-                height={225}
-                style={{
-                  width: '100%',
-                  height: 'auto',
-                  objectFit: 'cover',
-                  borderRadius: '12px',
-                  boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1)',
-                  marginBottom: '1rem'
-                }}
-              />
-              <h4 style={{fontSize: '1.25rem', fontWeight: '600', marginBottom: '0.5rem', color: '#2C3E50'}}>
-                Attention to Detail
-              </h4>
-              <p style={{fontSize: '0.875rem', color: '#6C757D'}}>
-                Thorough cleaning of every corner and frame
-              </p>
-            </div>
-
-            <div style={{textAlign: 'center'}}>
-              <Image 
-                src="/images/photos/house1.jpeg" 
-                alt="Beautiful home with clean windows" 
-                width={300}
-                height={225}
-                style={{
-                  width: '100%',
-                  height: 'auto',
-                  objectFit: 'cover',
-                  borderRadius: '12px',
-                  boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1)',
-                  marginBottom: '1rem'
-                }}
-              />
-              <h4 style={{fontSize: '1.25rem', fontWeight: '600', marginBottom: '0.5rem', color: '#2C3E50'}}>
-                Enhanced Curb Appeal
-              </h4>
-              <p style={{fontSize: '0.875rem', color: '#6C757D'}}>
-                Clean windows make your home shine
-              </p>
-            </div>
-
           </div>
         </div>
       </section>

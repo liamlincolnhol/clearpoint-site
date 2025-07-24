@@ -60,7 +60,7 @@ export default function SimpleMobileNav({ }: SimpleMobileNavProps) {
             Home
           </Link>
           <Link 
-            href="/services" 
+            href="/services/" 
             onClick={() => setIsOpen(false)}
             style={{
               display: 'block',
@@ -70,10 +70,10 @@ export default function SimpleMobileNav({ }: SimpleMobileNavProps) {
               borderBottom: '1px solid #eee'
             }}
           >
-            Services
+            Our Work
           </Link>
           <Link 
-            href="/about" 
+            href="/about/" 
             onClick={() => setIsOpen(false)}
             style={{
               display: 'block',
@@ -86,7 +86,7 @@ export default function SimpleMobileNav({ }: SimpleMobileNavProps) {
             About us
           </Link>
           <Link 
-            href="/contact" 
+            href="/contact/" 
             onClick={() => setIsOpen(false)}
             style={{
               display: 'block',
