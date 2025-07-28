@@ -65,7 +65,7 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
         setSubmitStatus('error');
         setErrorMessage(errorData.error || 'Failed to send message');
       }
-    } catch (error) {
+    } catch {
       setSubmitStatus('error');
       setErrorMessage('Network error. Please try again.');
     } finally {
@@ -86,10 +86,6 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
     boxSizing: 'border-box' as const,
   };
 
-  const focusStyle = {
-    outline: 'none',
-    borderColor: '#4A5D7A',
-  };
 
   return (
     <div style={{ maxWidth: '800px', margin: '0 auto', padding: '2rem', backgroundColor: '#FFFFFF', borderRadius: '12px', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
