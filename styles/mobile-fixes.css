@@ -264,6 +264,23 @@
   background-color: rgba(74, 93, 122, 0.1);
 }
 
+/* Show desktop navigation on wide screens */
+@media screen and (min-width: 769px) {
+  .desktop-nav,
+  nav.desktop-nav,
+  header .desktop-nav,
+  nav[style*="display: flex"],
+  nav[style*="gap: 2rem"],
+  nav[style*="display:flex"],
+  nav[style*="gap:2rem"] {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+}
+
 /* EMERGENCY Mobile Fix - Very Aggressive */
 @media screen and (max-width: 768px) {
   /* Hide ALL desktop navigation on mobile - Multiple targeting approaches */
@@ -385,6 +402,12 @@
   .service-card {
     max-width: 100% !important;
     transform: none !important;
+  }
+  
+  /* Work page layout - Stack images below before/after on mobile */
+  .work-layout {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
   }
 }
 
