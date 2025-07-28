@@ -5,7 +5,7 @@ export default function Navigation() {
     { href: '/', label: 'Home' },
     { href: '/services', label: 'Services' },
     { href: '/about', label: 'About us' },
-    { href: '/contact', label: 'Contact us' }
+    { href: '/contact', label: 'Free Quote' }
   ]
 
   return (
@@ -31,8 +31,16 @@ export default function Navigation() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium transition-colors hover:opacity-80"
-                style={{color: '#2C3E50'}}
+                className={`text-sm font-medium transition-colors hover:opacity-80 ${
+                  item.label === 'Free Quote' 
+                    ? 'border-2 px-3 py-2 rounded-md' 
+                    : ''
+                }`}
+                style={{
+                  color: item.label === 'Free Quote' ? '#FFFFFF' : '#2C3E50',
+                  backgroundColor: item.label === 'Free Quote' ? '#4A5D7A' : 'transparent',
+                  borderColor: item.label === 'Free Quote' ? '#4A5D7A' : 'transparent'
+                }}
               >
                 {item.label}
               </Link>

@@ -6,7 +6,9 @@ interface ContactFormData {
   phone: string;
   address: string;
   subject: string;
+  windowCount: string;
   message: string;
+  website: string; // Honeypot field
 }
 
 interface ContactFormProps {
@@ -20,7 +22,9 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
     phone: '',
     address: '',
     subject: '',
-    message: ''
+    windowCount: '',
+    message: '',
+    website: '' // Honeypot field
   });
   
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -57,7 +61,9 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
           phone: '',
           address: '',
           subject: '',
-          message: ''
+          windowCount: '',
+          message: '',
+          website: ''
         });
         if (onSuccess) onSuccess();
       } else {
@@ -86,9 +92,19 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
     boxSizing: 'border-box' as const,
   };
 
+  const selectStyle = {
+    ...inputStyle,
+    appearance: 'none' as const,
+    backgroundImage: 'url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3e%3cpolyline points=\'6,9 12,15 18,9\'%3e%3c/polyline%3e%3c/svg%3e")',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'right 12px center',
+    backgroundSize: '16px',
+    paddingRight: '40px',
+  };
+
 
   return (
-    <div style={{ maxWidth: '800px', margin: '0 auto', padding: '2rem', backgroundColor: '#FFFFFF', borderRadius: '12px', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
+    <div className="contact-form-container" style={{ maxWidth: '800px', margin: '0 auto', padding: '2rem', backgroundColor: '#FFFFFF', borderRadius: '12px', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
       <h2 style={{ fontSize: '2rem', fontWeight: '600', marginBottom: '2rem', color: '#2C3E50', textAlign: 'center', fontFamily: 'inherit' }}>
         Get Your Free Quote
       </h2>
@@ -184,15 +200,14 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
               name="subject"
               value={formData.subject}
               onChange={handleChange}
-              style={inputStyle}
+              style={selectStyle}
               onFocus={(e) => e.target.style.borderColor = '#4A5D7A'}
               onBlur={(e) => e.target.style.borderColor = '#E5E7EB'}
             >
               <option value="">Select a service</option>
-              <option value="Residential Window Cleaning">Residential Window Cleaning</option>
-              <option value="Commercial Window Cleaning">Commercial Window Cleaning</option>
-              <option value="Pressure Washing">Pressure Washing</option>
-              <option value="Gutter Cleaning">Gutter Cleaning</option>
+              <option value="Interior Only - Inside window cleaning">Interior Only - Inside window cleaning</option>
+              <option value="Complete Service - Inside and outside cleaning">Complete Service - Inside and outside cleaning</option>
+              <option value="Exterior Only - Outside window cleaning">Exterior Only - Outside window cleaning</option>
               <option value="Other">Other</option>
             </select>
           </div>
@@ -209,6 +224,25 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
             value={formData.address}
             onChange={handleChange}
             placeholder="Your service address"
+            style={inputStyle}
+            onFocus={(e) => e.target.style.borderColor = '#4A5D7A'}
+            onBlur={(e) => e.target.style.borderColor = '#E5E7EB'}
+          />
+        </div>
+
+        <div style={{ marginBottom: '1.5rem' }}>
+          <label htmlFor="windowCount" style={{ display: 'block', marginBottom: '0.75rem', fontWeight: '500', color: '#374151', fontFamily: 'inherit', fontSize: '0.875rem' }}>
+            Approximate Number of Windows
+          </label>
+          <input
+            type="number"
+            id="windowCount"
+            name="windowCount"
+            value={formData.windowCount}
+            onChange={handleChange}
+            placeholder="e.g. 15"
+            min="1"
+            max="200"
             style={inputStyle}
             onFocus={(e) => e.target.style.borderColor = '#4A5D7A'}
             onBlur={(e) => e.target.style.borderColor = '#E5E7EB'}
@@ -234,6 +268,20 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
             }}
             onFocus={(e) => e.target.style.borderColor = '#4A5D7A'}
             onBlur={(e) => e.target.style.borderColor = '#E5E7EB'}
+          />
+        </div>
+
+        {/* Honeypot field - hidden from users but visible to bots */}
+        <div style={{ display: 'none' }}>
+          <label htmlFor="website">Website (leave blank)</label>
+          <input
+            type="text"
+            id="website"
+            name="website"
+            value={formData.website}
+            onChange={handleChange}
+            tabIndex={-1}
+            autoComplete="off"
           />
         </div>
 
