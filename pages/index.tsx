@@ -32,7 +32,7 @@ export default function Home() {
             <Link href="/" style={{color: '#4A5D7A', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '600', borderBottom: '2px solid #4A5D7A', paddingBottom: '4px'}}>Home</Link>
             <Link href="/services/" style={{color: '#2C3E50', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '500'}}>Our Work</Link>
             <Link href="/about/" style={{color: '#2C3E50', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '500'}}>About us</Link>
-            <Link href="/contact/" style={{color: '#2C3E50', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '500'}}>Contact us</Link>
+            <Link href="/contact/" style={{color: '#FFFFFF', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '500', border: '2px solid #4A5D7A', padding: '8px 12px', borderRadius: '6px', backgroundColor: '#4A5D7A'}}>Free Quote</Link>
           </nav>
           
           {/* CTA Button + Mobile Nav */}
