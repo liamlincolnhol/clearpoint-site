@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://clearpointwindowservices.com/sitemap.xml
+
+# Crawl delay (optional - reduces server load)
+Crawl-delay: 1
+
+# Disallow specific paths if needed
+Disallow: /api/
+Disallow: /_next/
+Disallow: /out/
