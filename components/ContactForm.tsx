@@ -104,7 +104,7 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
 
 
   return (
-    <div className="contact-form-container" style={{ maxWidth: '800px', margin: '0 auto', padding: '2rem', backgroundColor: '#FFFFFF', borderRadius: '12px', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
+    <div className="contact-form-container" style={{ maxWidth: '800px', margin: '0 auto', padding: '2rem', backgroundColor: '#FFFFFF', borderRadius: '12px', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', fontFamily: 'var(--font-montserrat), system-ui, -apple-system, sans-serif' }}>
       <h2 style={{ fontSize: '2rem', fontWeight: '600', marginBottom: '2rem', color: '#2C3E50', textAlign: 'center', fontFamily: 'inherit' }}>
         Get Your Free Quote
       </h2>
@@ -251,14 +251,13 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
 
         <div style={{ marginBottom: '2rem' }}>
           <label htmlFor="message" style={{ display: 'block', marginBottom: '0.75rem', fontWeight: '500', color: '#374151', fontFamily: 'inherit', fontSize: '0.875rem' }}>
-            Message *
+            Message
           </label>
           <textarea
             id="message"
             name="message"
             value={formData.message}
             onChange={handleChange}
-            required
             rows={5}
             placeholder="Tell us about your window cleaning needs..."
             style={{

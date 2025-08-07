@@ -58,9 +58,9 @@ const contactSchema = z.object({
     .transform((val) => val === '' ? undefined : Number(val))
     .refine((val) => val === undefined || (val >= 1 && val <= 200), 'Window count must be between 1 and 200')
     .optional(),
-  message: z.string().min(10, 'Message must be at least 10 characters').max(2000, 'Message too long').trim(),
+  message: z.string().max(2000, 'Message too long').trim().optional(),
   // Honeypot field - should be empty
-  website: z.string().max(0, 'Spam detected').optional(),
+  website: z.string().optional(),
 });
 
 // Type inferred from Zod schema
@@ -81,10 +81,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   try {
+    // Log the request body for debugging
+    console.log('Request body:', JSON.stringify(req.body, null, 2));
+    
     // Validate input with Zod
     const validationResult = contactSchema.safeParse(req.body);
     
     if (!validationResult.success) {
+      console.log('Validation failed:', validationResult.error.issues);
       return res.status(400).json({ 
         error: 'Validation failed', 
         details: validationResult.error.issues 
