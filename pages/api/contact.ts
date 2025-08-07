@@ -121,7 +121,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
         <div style="background-color: #FAF9F8; padding: 20px; border-radius: 8px;">
           <h3 style="color: #4A5D7A; margin-top: 0;">Message</h3>
-          <p style="white-space: pre-wrap;">${message}</p>
+          <p style="white-space: pre-wrap;">${message || 'No message provided'}</p>
         </div>
 
         <div style="margin-top: 20px; padding: 15px; background-color: #E8F4FD; border-radius: 8px;">
