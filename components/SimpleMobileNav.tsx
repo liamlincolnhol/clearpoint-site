@@ -83,7 +83,7 @@ export default function SimpleMobileNav({ }: SimpleMobileNavProps) {
               borderBottom: '1px solid #eee'
             }}
           >
-            About us
+            About me
           </Link>
           <Link 
             href="/contact/" 

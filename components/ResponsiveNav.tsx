@@ -46,7 +46,7 @@ export default function ResponsiveNav({ currentPage }: ResponsiveNavProps) {
           borderBottom: isAbout ? '2px solid #4A5D7A' : 'none',
           paddingBottom: isAbout ? '4px' : '0'
         }}>
-          About us
+          About me
         </Link>
         <Link href="/contact" style={{
           color: isContact ? '#4A5D7A' : '#2C3E50', 
@@ -82,7 +82,7 @@ export default function ResponsiveNav({ currentPage }: ResponsiveNavProps) {
       >
         <option value="/">Home</option>
         <option value="/services">Services</option>
-        <option value="/about">About us</option>
+        <option value="/about">About me</option>
         <option value="/contact">Contact us</option>
       </select>
     </>
