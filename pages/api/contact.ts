@@ -134,7 +134,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const { data, error } = await resend.emails.send({
       from: 'ClearPoint Contact Form <noreply@clearpointwindowservices.com>',
-      to: ['linc2liam@gmail.com'],
+      to: ['clearpointwindows1@gmail.com'],
       subject: subject ? `Contact Form: ${subject}` : `New Contact Form Submission from ${name}`,
       html: htmlContent,
       replyTo: email,
