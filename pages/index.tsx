@@ -79,63 +79,71 @@ export default function Home() {
                 ClearPoint Window Services. Whether it's inside, outside, 
                 or both - I'll make your windows shine like new this summer!
               </p>
-              <div style={{display: 'flex', gap: '1rem', flexWrap: 'wrap'}}>
-                <button 
-                  style={{
-                    backgroundColor: '#4A5D7A',
-                    color: '#FFFFFF',
-                    padding: '16px 32px',
-                    borderRadius: '8px',
-                    border: 'none',
-                    fontSize: '1rem',
-                    fontWeight: '500',
-                    cursor: 'pointer',
-                    transition: 'all 0.3s ease'
-                  }}
-                  onMouseEnter={(e) => {
-                    const target = e.target as HTMLButtonElement;
-                    target.style.backgroundColor = '#3A4D6A';
-                    target.style.transform = 'translateY(-2px)';
-                    target.style.boxShadow = '0 8px 25px rgba(74, 93, 122, 0.3)';
-                  }}
-                  onMouseLeave={(e) => {
-                    const target = e.target as HTMLButtonElement;
-                    target.style.backgroundColor = '#4A5D7A';
-                    target.style.transform = 'translateY(0)';
-                    target.style.boxShadow = 'none';
-                  }}
-                >
-                  Call Us Now
-                </button>
-                <button 
-                  style={{
-                    backgroundColor: 'transparent',
-                    color: '#4A5D7A',
-                    padding: '16px 32px',
-                    borderRadius: '8px',
-                    border: '2px solid #4A5D7A',
-                    fontSize: '1rem',
-                    fontWeight: '500',
-                    cursor: 'pointer',
-                    transition: 'all 0.3s ease'
-                  }}
-                  onMouseEnter={(e) => {
-                    const target = e.target as HTMLButtonElement;
-                    target.style.backgroundColor = '#4A5D7A';
-                    target.style.color = '#FFFFFF';
-                    target.style.transform = 'translateY(-2px)';
-                    target.style.boxShadow = '0 8px 25px rgba(74, 93, 122, 0.3)';
-                  }}
-                  onMouseLeave={(e) => {
-                    const target = e.target as HTMLButtonElement;
-                    target.style.backgroundColor = 'transparent';
-                    target.style.color = '#4A5D7A';
-                    target.style.transform = 'translateY(0)';
-                    target.style.boxShadow = 'none';
-                  }}
-                >
-                  About Us
-                </button>
+              <div style={{display: 'flex', gap: '1rem', flexWrap: 'wrap', alignItems: 'center'}}>
+                <Link href="/contact">
+                  <button 
+                    style={{
+                      backgroundColor: '#4A5D7A',
+                      color: '#FFFFFF',
+                      padding: '16px 32px',
+                      borderRadius: '8px',
+                      border: '2px solid #4A5D7A',
+                      fontSize: '1rem',
+                      fontWeight: '500',
+                      cursor: 'pointer',
+                      transition: 'all 0.3s ease',
+                      minWidth: '140px',
+                      textAlign: 'center'
+                    }}
+                    onMouseEnter={(e) => {
+                      const target = e.target as HTMLButtonElement;
+                      target.style.backgroundColor = '#3A4D6A';
+                      target.style.transform = 'translateY(-2px)';
+                      target.style.boxShadow = '0 8px 25px rgba(74, 93, 122, 0.3)';
+                    }}
+                    onMouseLeave={(e) => {
+                      const target = e.target as HTMLButtonElement;
+                      target.style.backgroundColor = '#4A5D7A';
+                      target.style.transform = 'translateY(0)';
+                      target.style.boxShadow = 'none';
+                    }}
+                  >
+                    Free Quote
+                  </button>
+                </Link>
+                <Link href="/about">
+                  <button 
+                    style={{
+                      backgroundColor: 'transparent',
+                      color: '#4A5D7A',
+                      padding: '16px 32px',
+                      borderRadius: '8px',
+                      border: '2px solid #4A5D7A',
+                      fontSize: '1rem',
+                      fontWeight: '500',
+                      cursor: 'pointer',
+                      transition: 'all 0.3s ease',
+                      minWidth: '140px',
+                      textAlign: 'center'
+                    }}
+                    onMouseEnter={(e) => {
+                      const target = e.target as HTMLButtonElement;
+                      target.style.backgroundColor = '#4A5D7A';
+                      target.style.color = '#FFFFFF';
+                      target.style.transform = 'translateY(-2px)';
+                      target.style.boxShadow = '0 8px 25px rgba(74, 93, 122, 0.3)';
+                    }}
+                    onMouseLeave={(e) => {
+                      const target = e.target as HTMLButtonElement;
+                      target.style.backgroundColor = 'transparent';
+                      target.style.color = '#4A5D7A';
+                      target.style.transform = 'translateY(0)';
+                      target.style.boxShadow = 'none';
+                    }}
+                  >
+                    About Me
+                  </button>
+                </Link>
               </div>
             </div>
             
