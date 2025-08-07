@@ -187,19 +187,21 @@ export default function Home() {
                 <li style={{marginBottom: '0.5rem'}}>✓ Streak-free finish</li>
                 <li style={{marginBottom: '0.5rem'}}>✓ Safe for your home</li>
               </ul>
-              <button style={{
-                width: '100%',
-                backgroundColor: '#4A5D7A',
-                color: '#FFFFFF',
-                padding: '12px',
-                borderRadius: '6px',
-                border: 'none',
-                fontSize: '0.875rem',
-                fontWeight: '500',
-                cursor: 'pointer'
-              }}>
-                Get Quote
-              </button>
+              <Link href="/contact">
+                <button style={{
+                  width: '100%',
+                  backgroundColor: '#4A5D7A',
+                  color: '#FFFFFF',
+                  padding: '12px',
+                  borderRadius: '6px',
+                  border: 'none',
+                  fontSize: '0.875rem',
+                  fontWeight: '500',
+                  cursor: 'pointer'
+                }}>
+                  Get Quote
+                </button>
+              </Link>
             </div>
 
             <div className="service-card" style={{backgroundColor: '#FFFFFF', borderRadius: '8px', boxShadow: '0 15px 35px rgba(0, 0, 0, 0.15)', padding: '2.5rem', textAlign: 'center', border: '2px solid #4A5D7A', flex: '0 0 320px', transform: 'scale(1.05)'}}>
@@ -214,19 +216,21 @@ export default function Home() {
                 <li style={{marginBottom: '0.5rem'}}>✓ Complete window refresh</li>
                 <li style={{marginBottom: '0.5rem'}}>✓ Best value service</li>
               </ul>
-              <button style={{
-                width: '100%',
-                backgroundColor: '#4A5D7A',
-                color: '#FFFFFF',
-                padding: '14px',
-                borderRadius: '6px',
-                border: 'none',
-                fontSize: '0.875rem',
-                fontWeight: '600',
-                cursor: 'pointer'
-              }}>
-                Get Quote
-              </button>
+              <Link href="/contact">
+                <button style={{
+                  width: '100%',
+                  backgroundColor: '#4A5D7A',
+                  color: '#FFFFFF',
+                  padding: '14px',
+                  borderRadius: '6px',
+                  border: 'none',
+                  fontSize: '0.875rem',
+                  fontWeight: '600',
+                  cursor: 'pointer'
+                }}>
+                  Get Quote
+                </button>
+              </Link>
             </div>
 
             <div style={{backgroundColor: '#FFFFFF', borderRadius: '8px', boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1)', padding: '2rem', textAlign: 'center', border: '1px solid #FAF9F8', flex: '0 0 300px'}}>
@@ -240,19 +244,21 @@ export default function Home() {
                 <li style={{marginBottom: '0.5rem'}}>✓ Weather damage removal</li>
                 <li style={{marginBottom: '0.5rem'}}>✓ Professional equipment</li>
               </ul>
-              <button style={{
-                width: '100%',
-                backgroundColor: '#4A5D7A',
-                color: '#FFFFFF',
-                padding: '12px',
-                borderRadius: '6px',
-                border: 'none',
-                fontSize: '0.875rem',
-                fontWeight: '500',
-                cursor: 'pointer'
-              }}>
-                Get Quote
-              </button>
+              <Link href="/contact">
+                <button style={{
+                  width: '100%',
+                  backgroundColor: '#4A5D7A',
+                  color: '#FFFFFF',
+                  padding: '12px',
+                  borderRadius: '6px',
+                  border: 'none',
+                  fontSize: '0.875rem',
+                  fontWeight: '500',
+                  cursor: 'pointer'
+                }}>
+                  Get Quote
+                </button>
+              </Link>
             </div>
           </div>
         </div>
