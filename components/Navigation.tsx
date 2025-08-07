@@ -25,35 +25,36 @@ export default function Navigation() {
             </div>
           </Link>
           
-          {/* Center - Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`text-sm font-medium transition-colors hover:opacity-80 ${
-                  item.label === 'Free Quote' 
-                    ? 'border-2 px-3 py-2 rounded-md' 
-                    : ''
-                }`}
-                style={{
-                  color: item.label === 'Free Quote' ? '#FFFFFF' : '#2C3E50',
-                  backgroundColor: item.label === 'Free Quote' ? '#4A5D7A' : 'transparent',
-                  borderColor: item.label === 'Free Quote' ? '#4A5D7A' : 'transparent'
-                }}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </nav>
-          
-          {/* Right - CTA Button */}
-          <button 
-            className="px-6 py-3 rounded-lg text-sm font-medium text-white transition-colors hover:opacity-90"
-            style={{backgroundColor: '#4A5D7A'}}
-          >
-            Call Us
-          </button>
+          {/* Right - Navigation and CTA */}
+          <div className="flex items-center space-x-8">
+            <nav className="hidden md:flex space-x-8">
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`text-sm font-medium transition-colors hover:opacity-80 ${
+                    item.label === 'Free Quote' 
+                      ? 'border-2 px-3 py-2 rounded-md' 
+                      : ''
+                  }`}
+                  style={{
+                    color: item.label === 'Free Quote' ? '#FFFFFF' : '#2C3E50',
+                    backgroundColor: item.label === 'Free Quote' ? '#4A5D7A' : 'transparent',
+                    borderColor: item.label === 'Free Quote' ? '#4A5D7A' : 'transparent'
+                  }}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
+            
+            <button 
+              className="px-6 py-3 rounded-lg text-sm font-medium text-white transition-colors hover:opacity-90"
+              style={{backgroundColor: '#4A5D7A'}}
+            >
+              Call Us
+            </button>
+          </div>
         </div>
       </div>
     </header>
