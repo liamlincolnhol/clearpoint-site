@@ -32,7 +32,7 @@ export default function Contact() {
           <nav className="desktop-nav" style={{display: 'flex', gap: '2rem', alignItems: 'center'}}>
             <Link href="/" style={{color: '#2C3E50', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '500'}}>Home</Link>
             <Link href="/services/" style={{color: '#2C3E50', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '500'}}>Our Work</Link>
-            <Link href="/about/" style={{color: '#2C3E50', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '500'}}>About us</Link>
+            <Link href="/about/" style={{color: '#2C3E50', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '500'}}>About me</Link>
             <Link href="/contact" style={{color: '#FFFFFF', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '600', border: '2px solid #4A5D7A', padding: '8px 12px', borderRadius: '6px', backgroundColor: '#4A5D7A'}}>Free Quote</Link>
           </nav>
           

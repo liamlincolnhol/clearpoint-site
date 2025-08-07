@@ -69,7 +69,7 @@ export default function ImprovedMobileNav({ currentPage }: ImprovedMobileNavProp
                 fontSize: '16px'
               }}
             >
-              About us
+              About me
             </Link>
             <Link 
               href="/contact" 

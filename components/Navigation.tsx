@@ -4,7 +4,7 @@ export default function Navigation() {
   const navItems = [
     { href: '/', label: 'Home' },
     { href: '/services', label: 'Services' },
-    { href: '/about', label: 'About us' },
+    { href: '/about', label: 'About me' },
     { href: '/contact', label: 'Free Quote' }
   ]
 

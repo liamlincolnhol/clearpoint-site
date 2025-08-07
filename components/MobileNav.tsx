@@ -56,7 +56,7 @@ export default function MobileNav({ currentPage }: MobileNavProps) {
               color: currentPage === 'about' ? '#4A5D7A' : '#2C3E50'
             }}
           >
-            About us
+            About me
           </Link>
           <Link 
             href="/contact" 

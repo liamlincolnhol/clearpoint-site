@@ -12,7 +12,7 @@ export default function BestPracticeMobileNav({ currentPage }: MobileNavProps) {
   const navItems = [
     { href: '/', label: 'Home', id: 'home' },
     { href: '/services', label: 'Services', id: 'services' },
-    { href: '/about', label: 'About us', id: 'about' },
+    { href: '/about', label: 'About me', id: 'about' },
     { href: '/contact', label: 'Contact us', id: 'contact' }
   ]
 
