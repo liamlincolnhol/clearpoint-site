@@ -19,7 +19,7 @@
 body {
   color: #2C3E50;
   background-color: #F8F9FA;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: var(--font-montserrat), 'Montserrat', system-ui, -apple-system, sans-serif;
   line-height: 1.6;
 }
 

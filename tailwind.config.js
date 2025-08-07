@@ -14,6 +14,9 @@ module.exports = {
         'text-secondary': '#6C757D',
         accent: '#4A5D7A',
       },
+      fontFamily: {
+        'montserrat': ['var(--font-montserrat)', 'system-ui', '-apple-system', 'sans-serif'],
+      },
     },
   },
   plugins: [],
