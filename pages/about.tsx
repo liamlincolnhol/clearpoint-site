@@ -8,7 +8,7 @@ export default function About() {
     <div style={{backgroundColor: '#F8F9FA', minHeight: '100vh'}}>
       <SEO
         title="About ClearPoint Window Services - Mason Rose"
-        description="Learn about Mason Rose, the 17-year-old entrepreneur behind ClearPoint Window Services. Dedicated to providing quality window cleaning at affordable rates."
+        description="Learn about Mason Rose, the entrepreneur behind ClearPoint Window Services. Dedicated to providing quality window cleaning at affordable rates."
         keywords="about, Mason Rose, ClearPoint, window cleaning, entrepreneur, young business"
       />
 
@@ -51,7 +51,7 @@ export default function About() {
               </h1>
               <div style={{display: 'flex', flexDirection: 'column', gap: '1rem', color: '#6C757D', fontSize: '1.125rem', lineHeight: '1.6'}}>
                 <p>
-                  As a 17-year-old entrepreneur, I decided to start ClearPoint Window Services to earn money 
+                  As an entrepreneur, I decided to start ClearPoint Window Services to earn money
                   over the summer while providing a valuable service to my community. I believe in doing 
                   quality work at fair prices.
                 </p>

@@ -9,7 +9,7 @@ export default function Home() {
     <div style={{backgroundColor: '#F8F9FA', minHeight: '100vh'}}>
       <SEO
         title="ClearPoint Window Services - Professional Window Cleaning"
-        description="Hi! I'm Mason Rose, a 17-year-old entrepreneur offering professional window cleaning services. Inside, outside, or both - I'll make your windows shine like new!"
+        description="Hi! I'm Mason Rose, an entrepreneur offering professional window cleaning services. Inside, outside, or both - I'll make your windows shine like new!"
         keywords="window cleaning, window washing, residential, ClearPoint, Mason Rose, professional"
       />
 
@@ -75,7 +75,7 @@ export default function Home() {
                 maxWidth: '28rem', 
                 color: '#6C757D'
               }}>
-                Hi! I'm Mason Rose, a 17-year-old entrepreneur starting 
+                Hi! I'm Mason Rose, an entrepreneur starting
                 ClearPoint Window Services. Whether it's inside, outside, 
                 or both - I'll make your windows shine like new this summer!
               </p>
